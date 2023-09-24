@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF47394B-B575-46E5-81ED-5C19038F52F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>punto_de_venta</RootNamespace>
+    <AssemblyName>punto de venta</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommLayer.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonControls.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Controllers.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Prompting.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.Shared.13.0.4003\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\conexion.cs" />
+    <Compile Include="Clases\globales.cs" />
+    <Compile Include="Formas\Frmacercade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmacercade.Designer.cs">
+      <DependentUpon>Frmacercade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmauditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmauditoria.Designer.cs">
+      <DependentUpon>Frmauditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmclientes.Designer.cs">
+      <DependentUpon>Frmclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmcompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmcompras.Designer.cs">
+      <DependentUpon>Frmcompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmempleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmempleados.Designer.cs">
+      <DependentUpon>Frmempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmlogin.Designer.cs">
+      <DependentUpon>Frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmmenu.Designer.cs">
+      <DependentUpon>Frmmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmproductos.Designer.cs">
+      <DependentUpon>Frmproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmproveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmproveedores.Designer.cs">
+      <DependentUpon>Frmproveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmrespaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmrespaldo.Designer.cs">
+      <DependentUpon>Frmrespaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmventa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmventa.Designer.cs">
+      <DependentUpon>Frmventa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frmventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmventas.Designer.cs">
+      <DependentUpon>Frmventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pventaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pventaDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formas\Frmacercade.resx">
+      <DependentUpon>Frmacercade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmauditoria.resx">
+      <DependentUpon>Frmauditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmclientes.resx">
+      <DependentUpon>Frmclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmcompras.resx">
+      <DependentUpon>Frmcompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmempleados.resx">
+      <DependentUpon>Frmempleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmlogin.resx">
+      <DependentUpon>Frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmmenu.resx">
+      <DependentUpon>Frmmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmproductos.resx">
+      <DependentUpon>Frmproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmproveedores.resx">
+      <DependentUpon>Frmproveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmrespaldo.resx">
+      <DependentUpon>Frmrespaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmventa.resx">
+      <DependentUpon>Frmventa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmventas.resx">
+      <DependentUpon>Frmventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="pventaDataSet.xsc">
+      <DependentUpon>pventaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pventaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pventaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pventaDataSet.xss">
+      <DependentUpon>pventaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Iconos\" />
+    <Folder Include="informes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
