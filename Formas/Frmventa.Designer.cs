@@ -73,14 +73,14 @@
             this.btnmenuventa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnproductos = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnproductos = new System.Windows.Forms.Button();
             this.gpboxtipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -89,9 +89,9 @@
             // 
             // txtcambio
             // 
-            this.txtcambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtcambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcambio.Location = new System.Drawing.Point(1212, 767);
+            this.txtcambio.Location = new System.Drawing.Point(1212, 812);
             this.txtcambio.Margin = new System.Windows.Forms.Padding(4);
             this.txtcambio.Name = "txtcambio";
             this.txtcambio.Size = new System.Drawing.Size(157, 30);
@@ -99,10 +99,10 @@
             // 
             // lblcambio
             // 
-            this.lblcambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblcambio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblcambio.AutoSize = true;
             this.lblcambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcambio.Location = new System.Drawing.Point(1112, 772);
+            this.lblcambio.Location = new System.Drawing.Point(1112, 817);
             this.lblcambio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcambio.Name = "lblcambio";
             this.lblcambio.Size = new System.Drawing.Size(91, 25);
@@ -111,9 +111,9 @@
             // 
             // txtpago
             // 
-            this.txtpago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtpago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtpago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpago.Location = new System.Drawing.Point(1212, 717);
+            this.txtpago.Location = new System.Drawing.Point(1212, 762);
             this.txtpago.Margin = new System.Windows.Forms.Padding(4);
             this.txtpago.Name = "txtpago";
             this.txtpago.Size = new System.Drawing.Size(156, 30);
@@ -121,10 +121,10 @@
             // 
             // lblpago
             // 
-            this.lblpago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblpago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblpago.AutoSize = true;
             this.lblpago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpago.Location = new System.Drawing.Point(1089, 720);
+            this.lblpago.Location = new System.Drawing.Point(1089, 765);
             this.lblpago.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpago.Name = "lblpago";
             this.lblpago.Size = new System.Drawing.Size(109, 25);
@@ -133,9 +133,9 @@
             // 
             // txttotal
             // 
-            this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txttotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotal.Location = new System.Drawing.Point(1211, 670);
+            this.txttotal.Location = new System.Drawing.Point(1211, 715);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(157, 30);
@@ -143,10 +143,10 @@
             // 
             // lbltotal
             // 
-            this.lbltotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbltotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbltotal.AutoSize = true;
             this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(1131, 672);
+            this.lbltotal.Location = new System.Drawing.Point(1131, 717);
             this.lbltotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(72, 25);
@@ -242,14 +242,14 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btncerrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(889, 733);
+            this.btncerrar.Location = new System.Drawing.Point(889, 762);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(123, 112);
+            this.btncerrar.Size = new System.Drawing.Size(123, 100);
             this.btncerrar.TabIndex = 68;
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -257,14 +257,14 @@
             // 
             // btndeshacer
             // 
-            this.btndeshacer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btndeshacer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btndeshacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeshacer.Image = ((System.Drawing.Image)(resources.GetObject("btndeshacer.Image")));
             this.btndeshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btndeshacer.Location = new System.Drawing.Point(748, 733);
+            this.btndeshacer.Location = new System.Drawing.Point(748, 762);
             this.btndeshacer.Margin = new System.Windows.Forms.Padding(4);
             this.btndeshacer.Name = "btndeshacer";
-            this.btndeshacer.Size = new System.Drawing.Size(122, 112);
+            this.btndeshacer.Size = new System.Drawing.Size(122, 100);
             this.btndeshacer.TabIndex = 67;
             this.btndeshacer.Text = "Deshacer";
             this.btndeshacer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -272,29 +272,29 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnguardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnguardar.Location = new System.Drawing.Point(610, 733);
+            this.btnguardar.Location = new System.Drawing.Point(610, 762);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(114, 112);
+            this.btnguardar.Size = new System.Drawing.Size(114, 100);
             this.btnguardar.TabIndex = 66;
-            this.btnguardar.Text = "Guardar Imprimir";
+            this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnguardar.UseVisualStyleBackColor = true;
             // 
             // btntotalizar
             // 
-            this.btntotalizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btntotalizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btntotalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntotalizar.Image = ((System.Drawing.Image)(resources.GetObject("btntotalizar.Image")));
             this.btntotalizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btntotalizar.Location = new System.Drawing.Point(792, 640);
+            this.btntotalizar.Location = new System.Drawing.Point(748, 674);
             this.btntotalizar.Margin = new System.Windows.Forms.Padding(4);
             this.btntotalizar.Name = "btntotalizar";
-            this.btntotalizar.Size = new System.Drawing.Size(107, 72);
+            this.btntotalizar.Size = new System.Drawing.Size(122, 72);
             this.btntotalizar.TabIndex = 65;
             this.btntotalizar.Text = "Totalizar";
             this.btntotalizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -555,11 +555,11 @@
             this.btnmenuventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuventa.Image = ((System.Drawing.Image)(resources.GetObject("btnmenuventa.Image")));
             this.btnmenuventa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenuventa.Location = new System.Drawing.Point(12, 151);
+            this.btnmenuventa.Location = new System.Drawing.Point(12, 276);
             this.btnmenuventa.Name = "btnmenuventa";
-            this.btnmenuventa.Size = new System.Drawing.Size(157, 120);
+            this.btnmenuventa.Size = new System.Drawing.Size(121, 115);
             this.btnmenuventa.TabIndex = 77;
-            this.btnmenuventa.Text = "MENU";
+            this.btnmenuventa.Text = "Menu";
             this.btnmenuventa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenuventa.UseVisualStyleBackColor = true;
             this.btnmenuventa.Click += new System.EventHandler(this.btnmenuventa_Click);
@@ -577,7 +577,8 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -599,43 +600,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1076, 171);
+            this.dataGridView1.Size = new System.Drawing.Size(1076, 206);
             this.dataGridView1.TabIndex = 84;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1417, 100);
-            this.panel1.TabIndex = 85;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Controls.Add(this.btnproductos);
-            this.panel2.Controls.Add(this.btnmenuventa);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 769);
-            this.panel2.TabIndex = 86;
-            // 
-            // btnproductos
-            // 
-            this.btnproductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
-            this.btnproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnproductos.Location = new System.Drawing.Point(12, 311);
-            this.btnproductos.Name = "btnproductos";
-            this.btnproductos.Size = new System.Drawing.Size(157, 120);
-            this.btnproductos.TabIndex = 78;
-            this.btnproductos.Text = "PRODUCTOS";
-            this.btnproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnproductos.UseVisualStyleBackColor = true;
-            this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
             // 
             // codigo
             // 
@@ -673,6 +639,41 @@
             this.total.MinimumWidth = 6;
             this.total.Name = "total";
             this.total.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1417, 100);
+            this.panel1.TabIndex = 85;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Controls.Add(this.btnproductos);
+            this.panel2.Controls.Add(this.btnmenuventa);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(144, 769);
+            this.panel2.TabIndex = 86;
+            // 
+            // btnproductos
+            // 
+            this.btnproductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
+            this.btnproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnproductos.Location = new System.Drawing.Point(12, 436);
+            this.btnproductos.Name = "btnproductos";
+            this.btnproductos.Size = new System.Drawing.Size(121, 97);
+            this.btnproductos.TabIndex = 78;
+            this.btnproductos.Text = "Productos";
+            this.btnproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnproductos.UseVisualStyleBackColor = true;
+            this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
             // 
             // Frmventa
             // 

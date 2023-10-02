@@ -83,7 +83,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(540, 21);
+            this.label2.Location = new System.Drawing.Point(554, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 54);
             this.label2.TabIndex = 0;
@@ -94,9 +94,9 @@
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(173, 0);
+            this.panel2.Location = new System.Drawing.Point(146, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1335, 100);
+            this.panel2.Size = new System.Drawing.Size(1362, 100);
             this.panel2.TabIndex = 49;
             // 
             // btnmenu
@@ -104,11 +104,11 @@
             this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenu.Image = ((System.Drawing.Image)(resources.GetObject("btnmenu.Image")));
             this.btnmenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenu.Location = new System.Drawing.Point(12, 272);
+            this.btnmenu.Location = new System.Drawing.Point(12, 329);
             this.btnmenu.Name = "btnmenu";
-            this.btnmenu.Size = new System.Drawing.Size(141, 124);
+            this.btnmenu.Size = new System.Drawing.Size(118, 117);
             this.btnmenu.TabIndex = 54;
-            this.btnmenu.Text = "MENU";
+            this.btnmenu.Text = "Menu";
             this.btnmenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenu.UseVisualStyleBackColor = true;
             this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
@@ -118,11 +118,11 @@
             this.btnventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
             this.btnventa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnventa.Location = new System.Drawing.Point(12, 429);
+            this.btnventa.Location = new System.Drawing.Point(12, 473);
             this.btnventa.Name = "btnventa";
-            this.btnventa.Size = new System.Drawing.Size(141, 116);
+            this.btnventa.Size = new System.Drawing.Size(118, 117);
             this.btnventa.TabIndex = 55;
-            this.btnventa.Text = "VENTA";
+            this.btnventa.Text = "Venta";
             this.btnventa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnventa.UseVisualStyleBackColor = true;
             this.btnventa.Click += new System.EventHandler(this.btnventa_Click);
@@ -134,12 +134,12 @@
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnguardar.Location = new System.Drawing.Point(598, 707);
+            this.btnguardar.Location = new System.Drawing.Point(793, 711);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(151, 95);
+            this.btnguardar.Size = new System.Drawing.Size(121, 95);
             this.btnguardar.TabIndex = 36;
-            this.btnguardar.Text = "GUARDAR";
+            this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnguardar.UseVisualStyleBackColor = true;
             // 
@@ -150,12 +150,12 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(785, 707);
+            this.btneliminar.Location = new System.Drawing.Point(654, 711);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(159, 95);
+            this.btneliminar.Size = new System.Drawing.Size(121, 95);
             this.btneliminar.TabIndex = 37;
-            this.btneliminar.Text = "ELIMINAR";
+            this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             // 
@@ -165,12 +165,12 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(1170, 707);
+            this.btncerrar.Location = new System.Drawing.Point(1080, 711);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(151, 95);
+            this.btncerrar.Size = new System.Drawing.Size(121, 95);
             this.btncerrar.TabIndex = 38;
-            this.btncerrar.Text = "SALIR";
+            this.btncerrar.Text = "Salir";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncerrar.UseVisualStyleBackColor = true;
             // 
@@ -181,12 +181,12 @@
             this.btnbaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbaja.Image = ((System.Drawing.Image)(resources.GetObject("btnbaja.Image")));
             this.btnbaja.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbaja.Location = new System.Drawing.Point(982, 707);
+            this.btnbaja.Location = new System.Drawing.Point(937, 711);
             this.btnbaja.Margin = new System.Windows.Forms.Padding(4);
             this.btnbaja.Name = "btnbaja";
-            this.btnbaja.Size = new System.Drawing.Size(154, 95);
+            this.btnbaja.Size = new System.Drawing.Size(121, 95);
             this.btnbaja.TabIndex = 46;
-            this.btnbaja.Text = "BAJA";
+            this.btnbaja.Text = "Baja";
             this.btnbaja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbaja.UseVisualStyleBackColor = true;
             // 
@@ -378,7 +378,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -386,7 +385,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(575, 117);
+            this.groupBox1.Location = new System.Drawing.Point(536, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(554, 202);
             this.groupBox1.TabIndex = 69;
@@ -483,12 +482,12 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(402, 707);
+            this.button3.Location = new System.Drawing.Point(510, 711);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 95);
+            this.button3.Size = new System.Drawing.Size(121, 95);
             this.button3.TabIndex = 74;
-            this.button3.Text = "ACTUALIZAR";
+            this.button3.Text = "Actualizar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -500,7 +499,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 834);
+            this.panel1.Size = new System.Drawing.Size(146, 834);
             this.panel1.TabIndex = 48;
             // 
             // Frmclientes

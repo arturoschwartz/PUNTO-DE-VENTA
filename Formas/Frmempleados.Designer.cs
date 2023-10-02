@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmempleados));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btncerrar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -50,6 +50,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,12 +65,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,12 +77,12 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(1031, 668);
+            this.btncerrar.Location = new System.Drawing.Point(1062, 673);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(157, 97);
+            this.btncerrar.Size = new System.Drawing.Size(146, 97);
             this.btncerrar.TabIndex = 90;
-            this.btncerrar.Text = "SALIR";
+            this.btncerrar.Text = "Salir";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncerrar.UseVisualStyleBackColor = true;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
@@ -94,12 +94,12 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(861, 668);
+            this.btneliminar.Location = new System.Drawing.Point(892, 673);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(146, 97);
             this.btneliminar.TabIndex = 89;
-            this.btneliminar.Text = "ELIMINAR";
+            this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             // 
@@ -249,11 +249,11 @@
             this.btnmenuempleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuempleados.Image = ((System.Drawing.Image)(resources.GetObject("btnmenuempleados.Image")));
             this.btnmenuempleados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenuempleados.Location = new System.Drawing.Point(12, 180);
+            this.btnmenuempleados.Location = new System.Drawing.Point(12, 300);
             this.btnmenuempleados.Name = "btnmenuempleados";
-            this.btnmenuempleados.Size = new System.Drawing.Size(129, 127);
+            this.btnmenuempleados.Size = new System.Drawing.Size(129, 114);
             this.btnmenuempleados.TabIndex = 97;
-            this.btnmenuempleados.Text = "MENU";
+            this.btnmenuempleados.Text = "Menu";
             this.btnmenuempleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenuempleados.UseVisualStyleBackColor = true;
             this.btnmenuempleados.Click += new System.EventHandler(this.btnmenuempleados_Click);
@@ -265,11 +265,11 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(679, 668);
+            this.button1.Location = new System.Drawing.Point(724, 673);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 97);
+            this.button1.Size = new System.Drawing.Size(146, 97);
             this.button1.TabIndex = 96;
-            this.button1.Text = "GUARDAR";
+            this.button1.Text = "Guardar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -290,7 +290,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(153, 678);
+            this.panel2.Size = new System.Drawing.Size(153, 704);
             this.panel2.TabIndex = 99;
             // 
             // dataGridView1
@@ -298,14 +298,14 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clave,
@@ -320,6 +320,49 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(828, 265);
             this.dataGridView1.TabIndex = 100;
+            // 
+            // clave
+            // 
+            this.clave.FillWeight = 60F;
+            this.clave.HeaderText = "Clave";
+            this.clave.MinimumWidth = 6;
+            this.clave.Name = "clave";
+            this.clave.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // domicilio
+            // 
+            this.domicilio.HeaderText = "Domicilio";
+            this.domicilio.MinimumWidth = 6;
+            this.domicilio.Name = "domicilio";
+            this.domicilio.ReadOnly = true;
+            // 
+            // localidad
+            // 
+            this.localidad.HeaderText = "Localidad";
+            this.localidad.MinimumWidth = 6;
+            this.localidad.Name = "localidad";
+            this.localidad.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.MinimumWidth = 6;
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // textBox1
             // 
@@ -352,7 +395,7 @@
             this.groupBox1.Controls.Add(this.txtclave);
             this.groupBox1.Controls.Add(this.lblclave);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(634, 130);
+            this.groupBox1.Location = new System.Drawing.Point(609, 130);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(543, 158);
             this.groupBox1.TabIndex = 103;
@@ -419,62 +462,19 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(471, 669);
+            this.button2.Location = new System.Drawing.Point(553, 673);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 97);
+            this.button2.Size = new System.Drawing.Size(146, 97);
             this.button2.TabIndex = 104;
-            this.button2.Text = "ACTUALIZAR";
+            this.button2.Text = "Actualizar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // clave
-            // 
-            this.clave.FillWeight = 60F;
-            this.clave.HeaderText = "Clave";
-            this.clave.MinimumWidth = 6;
-            this.clave.Name = "clave";
-            this.clave.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // domicilio
-            // 
-            this.domicilio.HeaderText = "Domicilio";
-            this.domicilio.MinimumWidth = 6;
-            this.domicilio.Name = "domicilio";
-            this.domicilio.ReadOnly = true;
-            // 
-            // localidad
-            // 
-            this.localidad.HeaderText = "Localidad";
-            this.localidad.MinimumWidth = 6;
-            this.localidad.Name = "localidad";
-            this.localidad.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.MinimumWidth = 6;
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-mail";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // Frmempleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1449, 778);
+            this.ClientSize = new System.Drawing.Size(1449, 804);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);

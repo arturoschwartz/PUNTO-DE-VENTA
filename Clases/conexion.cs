@@ -10,7 +10,7 @@ namespace punto_de_venta.Clases
     {
         public string conn()
         {
-            string miconexion = ("Data Source=DESKTOP-JMGB3LE;Initial Catalog=pventa;Integrated Security=True");
+            string miconexion = ("Data Source=DESKTOP-557DG21;Initial Catalog=pventa;Integrated Security=True");
             return miconexion;
         }
     }

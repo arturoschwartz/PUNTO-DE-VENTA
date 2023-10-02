@@ -113,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(176, 633);
+            this.panel2.Size = new System.Drawing.Size(141, 633);
             this.panel2.TabIndex = 82;
             // 
             // btnmenventas
@@ -121,11 +121,11 @@
             this.btnmenventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenventas.Image = ((System.Drawing.Image)(resources.GetObject("btnmenventas.Image")));
             this.btnmenventas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenventas.Location = new System.Drawing.Point(12, 149);
+            this.btnmenventas.Location = new System.Drawing.Point(12, 242);
             this.btnmenventas.Name = "btnmenventas";
-            this.btnmenventas.Size = new System.Drawing.Size(150, 118);
+            this.btnmenventas.Size = new System.Drawing.Size(117, 120);
             this.btnmenventas.TabIndex = 76;
-            this.btnmenventas.Text = "MENU";
+            this.btnmenventas.Text = "Menu";
             this.btnmenventas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenventas.UseVisualStyleBackColor = true;
             this.btnmenventas.Click += new System.EventHandler(this.btnmenventas_Click);
@@ -157,12 +157,12 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(645, 542);
+            this.btncerrar.Location = new System.Drawing.Point(678, 501);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(147, 87);
+            this.btncerrar.Size = new System.Drawing.Size(147, 95);
             this.btncerrar.TabIndex = 80;
-            this.btncerrar.Text = "SALIR";
+            this.btncerrar.Text = "Salir";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncerrar.UseVisualStyleBackColor = true;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
@@ -174,12 +174,12 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(456, 542);
+            this.btneliminar.Location = new System.Drawing.Point(444, 501);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(135, 87);
+            this.btneliminar.Size = new System.Drawing.Size(147, 95);
             this.btneliminar.TabIndex = 79;
-            this.btneliminar.Text = "IMPRIMIR";
+            this.btneliminar.Text = "Imprimir";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             // 

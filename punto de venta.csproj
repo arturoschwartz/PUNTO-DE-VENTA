@@ -183,11 +183,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="pventaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pventaDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Formas\Frmacercade.resx">
       <DependentUpon>Frmacercade.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,17 +238,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="pventaDataSet.xsc">
-      <DependentUpon>pventaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="pventaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pventaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="pventaDataSet.xss">
-      <DependentUpon>pventaDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

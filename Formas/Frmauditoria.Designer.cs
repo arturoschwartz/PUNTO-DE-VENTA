@@ -95,12 +95,12 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(586, 625);
+            this.button4.Location = new System.Drawing.Point(567, 597);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 102);
+            this.button4.Size = new System.Drawing.Size(131, 102);
             this.button4.TabIndex = 50;
-            this.button4.Text = "GUARDAR";
+            this.button4.Text = "Guardar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -110,12 +110,12 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(765, 625);
+            this.button3.Location = new System.Drawing.Point(790, 597);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 102);
+            this.button3.Size = new System.Drawing.Size(131, 102);
             this.button3.TabIndex = 49;
-            this.button3.Text = "ELIMINAR";
+            this.button3.Text = "Eliminar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -125,12 +125,12 @@
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnsalir.Location = new System.Drawing.Point(927, 625);
+            this.btnsalir.Location = new System.Drawing.Point(982, 597);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(131, 102);
             this.btnsalir.TabIndex = 48;
-            this.btnsalir.Text = "SALIR";
+            this.btnsalir.Text = "salir";
             this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -584,7 +584,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 696);
+            this.panel2.Size = new System.Drawing.Size(137, 696);
             this.panel2.TabIndex = 52;
             // 
             // btnmenuauditoria
@@ -592,11 +592,11 @@
             this.btnmenuauditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuauditoria.Image = ((System.Drawing.Image)(resources.GetObject("btnmenuauditoria.Image")));
             this.btnmenuauditoria.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenuauditoria.Location = new System.Drawing.Point(12, 242);
+            this.btnmenuauditoria.Location = new System.Drawing.Point(12, 284);
             this.btnmenuauditoria.Name = "btnmenuauditoria";
-            this.btnmenuauditoria.Size = new System.Drawing.Size(175, 121);
+            this.btnmenuauditoria.Size = new System.Drawing.Size(113, 121);
             this.btnmenuauditoria.TabIndex = 53;
-            this.btnmenuauditoria.Text = "MENU";
+            this.btnmenuauditoria.Text = "Menu";
             this.btnmenuauditoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenuauditoria.UseVisualStyleBackColor = true;
             this.btnmenuauditoria.Click += new System.EventHandler(this.btnmenuauditoria_Click);

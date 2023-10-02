@@ -93,10 +93,10 @@
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnsalir.Location = new System.Drawing.Point(1037, 649);
+            this.btnsalir.Location = new System.Drawing.Point(1057, 649);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(151, 111);
+            this.btnsalir.Size = new System.Drawing.Size(131, 93);
             this.btnsalir.TabIndex = 36;
             this.btnsalir.Text = "Salir";
             this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -110,10 +110,10 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(836, 649);
+            this.btneliminar.Location = new System.Drawing.Point(886, 649);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(161, 111);
+            this.btneliminar.Size = new System.Drawing.Size(131, 93);
             this.btneliminar.TabIndex = 35;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -126,10 +126,10 @@
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnguardar.Location = new System.Drawing.Point(449, 649);
+            this.btnguardar.Location = new System.Drawing.Point(532, 649);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(144, 111);
+            this.btnguardar.Size = new System.Drawing.Size(131, 93);
             this.btnguardar.TabIndex = 34;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -341,7 +341,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(175, 685);
+            this.panel2.Size = new System.Drawing.Size(140, 685);
             this.panel2.TabIndex = 42;
             // 
             // btnmenuproveedores
@@ -349,9 +349,9 @@
             this.btnmenuproveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuproveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnmenuproveedores.Image")));
             this.btnmenuproveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenuproveedores.Location = new System.Drawing.Point(12, 204);
+            this.btnmenuproveedores.Location = new System.Drawing.Point(12, 306);
             this.btnmenuproveedores.Name = "btnmenuproveedores";
-            this.btnmenuproveedores.Size = new System.Drawing.Size(143, 130);
+            this.btnmenuproveedores.Size = new System.Drawing.Size(115, 117);
             this.btnmenuproveedores.TabIndex = 43;
             this.btnmenuproveedores.Text = "MENU";
             this.btnmenuproveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -388,12 +388,12 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(638, 649);
+            this.button2.Location = new System.Drawing.Point(709, 649);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 111);
+            this.button2.Size = new System.Drawing.Size(131, 93);
             this.button2.TabIndex = 45;
-            this.button2.Text = "ACTUALIZAR";
+            this.button2.Text = "Actualizar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             // 

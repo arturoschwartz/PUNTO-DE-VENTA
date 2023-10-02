@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmproductos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btncerrar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
@@ -55,11 +55,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,12 +72,12 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(1242, 608);
+            this.btncerrar.Location = new System.Drawing.Point(1231, 608);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(159, 108);
+            this.btncerrar.Size = new System.Drawing.Size(122, 89);
             this.btncerrar.TabIndex = 87;
-            this.btncerrar.Text = "SALIR";
+            this.btncerrar.Text = "Salir";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncerrar.UseVisualStyleBackColor = true;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
@@ -89,12 +89,12 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(897, 608);
+            this.btneliminar.Location = new System.Drawing.Point(944, 608);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(140, 108);
+            this.btneliminar.Size = new System.Drawing.Size(122, 89);
             this.btneliminar.TabIndex = 86;
-            this.btneliminar.Text = "ELIMINAR";
+            this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             // 
@@ -104,12 +104,12 @@
             this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnbuscar.Image")));
             this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbuscar.Location = new System.Drawing.Point(1069, 608);
+            this.btnbuscar.Location = new System.Drawing.Point(1088, 608);
             this.btnbuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(141, 108);
+            this.btnbuscar.Size = new System.Drawing.Size(122, 89);
             this.btnbuscar.TabIndex = 83;
-            this.btnbuscar.Text = "BUSCAR";
+            this.btnbuscar.Text = "Buscar";
             this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             // 
@@ -117,7 +117,7 @@
             // 
             this.txtprecioventa.Enabled = false;
             this.txtprecioventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecioventa.Location = new System.Drawing.Point(364, 525);
+            this.txtprecioventa.Location = new System.Drawing.Point(305, 525);
             this.txtprecioventa.Margin = new System.Windows.Forms.Padding(4);
             this.txtprecioventa.Name = "txtprecioventa";
             this.txtprecioventa.Size = new System.Drawing.Size(150, 30);
@@ -127,7 +127,7 @@
             // 
             this.txtexistencia.Enabled = false;
             this.txtexistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtexistencia.Location = new System.Drawing.Point(364, 466);
+            this.txtexistencia.Location = new System.Drawing.Point(305, 466);
             this.txtexistencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtexistencia.Name = "txtexistencia";
             this.txtexistencia.Size = new System.Drawing.Size(150, 30);
@@ -137,7 +137,7 @@
             // 
             this.txtnombre.Enabled = false;
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombre.Location = new System.Drawing.Point(364, 413);
+            this.txtnombre.Location = new System.Drawing.Point(305, 413);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(259, 30);
@@ -147,7 +147,7 @@
             // 
             this.txtcodigo.Enabled = false;
             this.txtcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcodigo.Location = new System.Drawing.Point(364, 351);
+            this.txtcodigo.Location = new System.Drawing.Point(305, 351);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(118, 30);
@@ -157,7 +157,7 @@
             // 
             this.lblprecioventa.AutoSize = true;
             this.lblprecioventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprecioventa.Location = new System.Drawing.Point(215, 527);
+            this.lblprecioventa.Location = new System.Drawing.Point(156, 527);
             this.lblprecioventa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprecioventa.Name = "lblprecioventa";
             this.lblprecioventa.Size = new System.Drawing.Size(141, 25);
@@ -168,7 +168,7 @@
             // 
             this.lblexistencia.AutoSize = true;
             this.lblexistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblexistencia.Location = new System.Drawing.Point(258, 468);
+            this.lblexistencia.Location = new System.Drawing.Point(190, 469);
             this.lblexistencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblexistencia.Name = "lblexistencia";
             this.lblexistencia.Size = new System.Drawing.Size(107, 25);
@@ -179,7 +179,7 @@
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.Location = new System.Drawing.Point(269, 410);
+            this.lblnombre.Location = new System.Drawing.Point(210, 410);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(87, 25);
@@ -190,7 +190,7 @@
             // 
             this.lblcodigo.AutoSize = true;
             this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.Location = new System.Drawing.Point(275, 351);
+            this.lblcodigo.Location = new System.Drawing.Point(216, 351);
             this.lblcodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.Size = new System.Drawing.Size(81, 25);
@@ -204,11 +204,11 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(721, 608);
+            this.button1.Location = new System.Drawing.Point(800, 608);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 108);
+            this.button1.Size = new System.Drawing.Size(122, 89);
             this.button1.TabIndex = 88;
-            this.button1.Text = "GUARDAR";
+            this.button1.Text = "Guardar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -228,11 +228,11 @@
             this.btnmenuproductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnmenuproductos.Image")));
             this.btnmenuproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenuproductos.Location = new System.Drawing.Point(25, 380);
+            this.btnmenuproductos.Location = new System.Drawing.Point(12, 356);
             this.btnmenuproductos.Name = "btnmenuproductos";
-            this.btnmenuproductos.Size = new System.Drawing.Size(150, 125);
+            this.btnmenuproductos.Size = new System.Drawing.Size(111, 115);
             this.btnmenuproductos.TabIndex = 93;
-            this.btnmenuproductos.Text = "MENU";
+            this.btnmenuproductos.Text = "Menu";
             this.btnmenuproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenuproductos.UseVisualStyleBackColor = true;
             this.btnmenuproductos.Click += new System.EventHandler(this.btnmenuproductos_Click);
@@ -242,11 +242,11 @@
             this.btnventasproductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnventasproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnventasproductos.Image")));
             this.btnventasproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnventasproductos.Location = new System.Drawing.Point(25, 212);
+            this.btnventasproductos.Location = new System.Drawing.Point(12, 220);
             this.btnventasproductos.Name = "btnventasproductos";
-            this.btnventasproductos.Size = new System.Drawing.Size(150, 123);
+            this.btnventasproductos.Size = new System.Drawing.Size(111, 115);
             this.btnventasproductos.TabIndex = 92;
-            this.btnventasproductos.Text = "VENTA";
+            this.btnventasproductos.Text = "Venta";
             this.btnventasproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnventasproductos.UseVisualStyleBackColor = true;
             this.btnventasproductos.Click += new System.EventHandler(this.btnventasproductos_Click);
@@ -259,7 +259,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(651, 131);
+            this.groupBox1.Location = new System.Drawing.Point(574, 131);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(453, 162);
             this.groupBox1.TabIndex = 93;
@@ -320,7 +320,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 707);
+            this.panel2.Size = new System.Drawing.Size(149, 707);
             this.panel2.TabIndex = 95;
             // 
             // dataGridView1
@@ -328,57 +328,42 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nombre,
             this.existencia,
             this.precio});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(651, 351);
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.Location = new System.Drawing.Point(574, 351);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(827, 212);
             this.dataGridView1.TabIndex = 96;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Enabled = false;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(536, 608);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 108);
-            this.button2.TabIndex = 97;
-            this.button2.Text = "ACTUALIZAR";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // codigo
             // 
@@ -409,6 +394,21 @@
             this.precio.MinimumWidth = 6;
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Enabled = false;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(651, 608);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 89);
+            this.button2.TabIndex = 97;
+            this.button2.Text = "Actualizar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Frmproductos
             // 

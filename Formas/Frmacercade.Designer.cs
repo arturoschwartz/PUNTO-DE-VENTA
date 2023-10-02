@@ -39,6 +39,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnmenuacercade = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -46,26 +48,26 @@
             // 
             // button3
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(597, 381);
+            this.button3.Location = new System.Drawing.Point(782, 531);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 92);
             this.button3.TabIndex = 88;
-            this.button3.Text = "SALIR";
+            this.button3.Text = "Salir";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(593, 273);
+            this.label4.Location = new System.Drawing.Point(778, 379);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(215, 23);
@@ -74,10 +76,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(521, 273);
+            this.label3.Location = new System.Drawing.Point(706, 379);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 23);
@@ -86,10 +88,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(521, 227);
+            this.label2.Location = new System.Drawing.Point(706, 333);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 23);
@@ -98,10 +100,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(521, 185);
+            this.label1.Location = new System.Drawing.Point(706, 291);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 23);
@@ -110,9 +112,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(370, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(555, 291);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(124, 166);
@@ -125,11 +127,11 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(416, 20);
+            this.label5.Location = new System.Drawing.Point(621, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(322, 54);
+            this.label5.Size = new System.Drawing.Size(334, 54);
             this.label5.TabIndex = 89;
-            this.label5.Text = "ACERCADE...";
+            this.label5.Text = "ACERCA DE...";
             // 
             // panel1
             // 
@@ -138,7 +140,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 100);
+            this.panel1.Size = new System.Drawing.Size(1285, 100);
             this.panel1.TabIndex = 90;
             // 
             // panel2
@@ -148,7 +150,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(153, 426);
+            this.panel2.Size = new System.Drawing.Size(141, 687);
             this.panel2.TabIndex = 91;
             // 
             // btnmenuacercade
@@ -156,20 +158,46 @@
             this.btnmenuacercade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuacercade.Image = ((System.Drawing.Image)(resources.GetObject("btnmenuacercade.Image")));
             this.btnmenuacercade.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenuacercade.Location = new System.Drawing.Point(12, 154);
+            this.btnmenuacercade.Location = new System.Drawing.Point(12, 281);
             this.btnmenuacercade.Name = "btnmenuacercade";
-            this.btnmenuacercade.Size = new System.Drawing.Size(124, 120);
+            this.btnmenuacercade.Size = new System.Drawing.Size(113, 120);
             this.btnmenuacercade.TabIndex = 92;
-            this.btnmenuacercade.Text = "MENU";
+            this.btnmenuacercade.Text = "Menu";
             this.btnmenuacercade.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenuacercade.UseVisualStyleBackColor = true;
             this.btnmenuacercade.Click += new System.EventHandler(this.btnmenuacercade_Click);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(804, 424);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 23);
+            this.label6.TabIndex = 93;
+            this.label6.Text = "687-130-89-80";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(706, 424);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 23);
+            this.label7.TabIndex = 92;
+            this.label7.Text = "Telefono:";
             // 
             // Frmacercade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 526);
+            this.ClientSize = new System.Drawing.Size(1285, 787);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
@@ -204,5 +232,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnmenuacercade;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

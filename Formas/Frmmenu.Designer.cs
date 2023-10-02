@@ -60,8 +60,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnauditoria = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.Registros.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,7 +97,7 @@
             this.utileriaToolStripMenuItem,
             this.acercaDeToolStripMenuItem,
             this.btnsalir});
-            this.menuStrip1.Location = new System.Drawing.Point(181, 32);
+            this.menuStrip1.Location = new System.Drawing.Point(205, 32);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(712, 39);
             this.menuStrip1.TabIndex = 1;
@@ -295,12 +295,13 @@
             this.btnventa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
-            this.btnventa.Location = new System.Drawing.Point(15, 165);
+            this.btnventa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnventa.Location = new System.Drawing.Point(14, 373);
             this.btnventa.Name = "btnventa";
             this.btnventa.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.btnventa.Size = new System.Drawing.Size(166, 144);
+            this.btnventa.Size = new System.Drawing.Size(121, 110);
             this.btnventa.TabIndex = 2;
-            this.btnventa.Text = "VENTA";
+            this.btnventa.Text = "Venta";
             this.btnventa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnventa.UseVisualStyleBackColor = true;
             this.btnventa.Click += new System.EventHandler(this.btnventa_Click);
@@ -310,12 +311,13 @@
             this.btninventario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btninventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btninventario.Image = ((System.Drawing.Image)(resources.GetObject("btninventario.Image")));
-            this.btninventario.Location = new System.Drawing.Point(15, 523);
+            this.btninventario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btninventario.Location = new System.Drawing.Point(14, 509);
             this.btninventario.Name = "btninventario";
             this.btninventario.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.btninventario.Size = new System.Drawing.Size(166, 146);
+            this.btninventario.Size = new System.Drawing.Size(121, 111);
             this.btninventario.TabIndex = 3;
-            this.btninventario.Text = "INVESTARIO";
+            this.btninventario.Text = "Inventario";
             this.btninventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btninventario.UseVisualStyleBackColor = true;
             this.btninventario.Click += new System.EventHandler(this.btninventario_Click);
@@ -344,40 +346,39 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel2.Controls.Add(this.btnauditoria);
-            this.panel2.Controls.Add(this.btnventa);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btninventario);
+            this.panel2.Controls.Add(this.btnventa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 691);
+            this.panel2.Size = new System.Drawing.Size(151, 691);
             this.panel2.TabIndex = 6;
-            // 
-            // btnauditoria
-            // 
-            this.btnauditoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnauditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnauditoria.Image = ((System.Drawing.Image)(resources.GetObject("btnauditoria.Image")));
-            this.btnauditoria.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnauditoria.Location = new System.Drawing.Point(15, 342);
-            this.btnauditoria.Name = "btnauditoria";
-            this.btnauditoria.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.btnauditoria.Size = new System.Drawing.Size(166, 151);
-            this.btnauditoria.TabIndex = 5;
-            this.btnauditoria.Text = "AUDITORIA";
-            this.btnauditoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnauditoria.UseVisualStyleBackColor = true;
-            this.btnauditoria.Click += new System.EventHandler(this.btnauditoria_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.menuStrip1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(200, 74);
+            this.panel3.Location = new System.Drawing.Point(151, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1194, 100);
+            this.panel3.Size = new System.Drawing.Size(1243, 100);
             this.panel3.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(14, 234);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.button1.Size = new System.Drawing.Size(121, 110);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Auditoria";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Frmmenu
             // 
@@ -439,6 +440,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripMenuItem btnempleados;
         private System.Windows.Forms.ToolStripMenuItem btnproductos;
-        private System.Windows.Forms.Button btnauditoria;
+        private System.Windows.Forms.Button button1;
     }
 }

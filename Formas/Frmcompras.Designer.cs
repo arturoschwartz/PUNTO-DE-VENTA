@@ -59,12 +59,12 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(813, 621);
+            this.btncerrar.Location = new System.Drawing.Point(801, 529);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(147, 87);
+            this.btncerrar.Size = new System.Drawing.Size(147, 93);
             this.btncerrar.TabIndex = 72;
-            this.btncerrar.Text = "SALIR";
+            this.btncerrar.Text = "Salir";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncerrar.UseVisualStyleBackColor = true;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
@@ -76,12 +76,12 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(624, 621);
+            this.btneliminar.Location = new System.Drawing.Point(630, 529);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(135, 87);
+            this.btneliminar.Size = new System.Drawing.Size(147, 93);
             this.btneliminar.TabIndex = 71;
-            this.btneliminar.Text = "IMPRIMIR";
+            this.btneliminar.Text = "Imprimir";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             // 
@@ -179,11 +179,11 @@
             this.btnmenucompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucompras.Image = ((System.Drawing.Image)(resources.GetObject("btnmenucompras.Image")));
             this.btnmenucompras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmenucompras.Location = new System.Drawing.Point(12, 198);
+            this.btnmenucompras.Location = new System.Drawing.Point(12, 267);
             this.btnmenucompras.Name = "btnmenucompras";
-            this.btnmenucompras.Size = new System.Drawing.Size(155, 124);
+            this.btnmenucompras.Size = new System.Drawing.Size(118, 118);
             this.btnmenucompras.TabIndex = 76;
-            this.btnmenucompras.Text = "MENU";
+            this.btnmenucompras.Text = "Menu";
             this.btnmenucompras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmenucompras.UseVisualStyleBackColor = true;
             this.btnmenucompras.Click += new System.EventHandler(this.btnmenucompras_Click);
@@ -203,7 +203,7 @@
             this.groupBox6.Size = new System.Drawing.Size(516, 146);
             this.groupBox6.TabIndex = 76;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Periodo";
+            this.groupBox6.Text = "PERIODO";
             // 
             // dateTimePicker3
             // 
@@ -258,7 +258,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 91);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 660);
+            this.panel2.Size = new System.Drawing.Size(143, 660);
             this.panel2.TabIndex = 78;
             // 
             // Frmcompras
