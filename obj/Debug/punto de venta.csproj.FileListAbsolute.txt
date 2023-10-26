@@ -94,3 +94,7 @@ C:\PUNTO DE VENTA\bin\Debug\tr\CrystalDecisions.Shared.resources.dll
 C:\PUNTO DE VENTA\bin\Debug\zh-CHS\CrystalDecisions.Shared.resources.dll
 C:\PUNTO DE VENTA\bin\Debug\zh-CHT\CrystalDecisions.Shared.resources.dll
 C:\PUNTO DE VENTA\obj\Debug\punto de venta.csproj.CopyComplete
+C:\PUNTO DE VENTA\bin\Debug\punto de venta.exe.manifest
+C:\PUNTO DE VENTA\bin\Debug\punto de venta.application
+C:\PUNTO DE VENTA\obj\Debug\punto de venta.exe.manifest
+C:\PUNTO DE VENTA\obj\Debug\punto de venta.application

@@ -37,7 +37,7 @@ namespace punto_de_venta.Formas
                 objconexion = new Clases.conexion();
                 conexion = new SqlConnection(objconexion.conn());
                 conexion.Open();
-                string query = "select * from Usuarios where us_Usuarios=@us_Usuarios";
+                string query= "select * from Usuarios where us_Usuarios=@us_Usuarios";
                 SqlCommand comando = new SqlCommand(query, conexion);
 
                 comando.Parameters.Clear();
@@ -45,8 +45,8 @@ namespace punto_de_venta.Formas
                 SqlDataReader leer = comando.ExecuteReader();
                 if (leer.Read())
                 {
-                    existe = 1;
-                    password = leer["us_password"].ToString();
+                    //existe = 1;
+                    //password = leer["us_Password"].ToString();
                     nivel = leer["us_nivel"].ToString();
                     if (nivel == "1")
                         txtnivel.Text = "Administrador";
@@ -67,30 +67,30 @@ namespace punto_de_venta.Formas
             if (e. KeyChar == 13)
             {
                 conexion.Open();
-                SqlCommand comando = new SqlCommand("select * from Usuarios where us_Password=@us_Password", conexion);
+                string query = "select * from Usuarios where us_Password=@us_Password";
+                SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("us_Password", txtpassword.Text);
+                comando.Parameters.AddWithValue("@us_Password", txtpassword.Text);
                 SqlDataReader leer = comando.ExecuteReader();
                 if (leer.Read())
                 {
                     password = leer["us_Password"].ToString();
 
-                    Formas.Frmmenu x = new Formas.Frmmenu();
-                    x.Show();
-                    this.Hide();
-
+                    DialogResult res = MessageBox.Show("Bienvenido al sistema: " + txtusuario.Text, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (res == DialogResult.OK)
+                    {
+                        
+                        Formas.Frmmenu x = new Formas.Frmmenu();
+                        x.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
+                    
                     MessageBox.Show("Error, password incorrecta", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtpassword.Clear();
                     txtpassword.Focus();
-                    intentos++;
-                    if (intentos == 3)
-                    {
-                        MessageBox.Show("Oportunidades agotadas!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Application.Exit();
-                    }
                 }
             }
             conexion.Close();
@@ -99,23 +99,15 @@ namespace punto_de_venta.Formas
         private void btnacceder_Click(object sender, EventArgs e)
         {
             conexion.Open();
-            string query = "select * from Usuarios where us_Password=@us_Password";
-            SqlCommand comando = new SqlCommand(query, conexion);
+            string consulta = "select * from Usuarios where us_Password=@us_Password";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@us_Password", txtpassword.Text);
             SqlDataReader leer = comando.ExecuteReader();
             if (leer.Read())
             {
-                password = leer["us_Password"].ToString();
 
-                Formas.Frmmenu x = new Formas.Frmmenu();
-                x.Show();
-                this.Hide();
-
-                txtusuario.Clear();
-                txtusuario.Clear();
-                txtusuario.Focus();
-                txtpassword.Enabled = false;
+                
             }
             conexion.Close();
         }

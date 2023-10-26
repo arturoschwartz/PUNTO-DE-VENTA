@@ -154,5 +154,12 @@ namespace punto_de_venta.Formas
             x.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Formas.Frmauditoria x = new Formas.Frmauditoria();
+            x.Show();
+            this.Hide();
+        }
     }
 }
