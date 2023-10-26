@@ -98,3 +98,55 @@ C:\PUNTO DE VENTA\bin\Debug\punto de venta.exe.manifest
 C:\PUNTO DE VENTA\bin\Debug\punto de venta.application
 C:\PUNTO DE VENTA\obj\Debug\punto de venta.exe.manifest
 C:\PUNTO DE VENTA\obj\Debug\punto de venta.application
+C:\PUNTO-DE-VENTA\bin\Debug\punto de venta.exe.config
+C:\PUNTO-DE-VENTA\bin\Debug\punto de venta.exe.manifest
+C:\PUNTO-DE-VENTA\bin\Debug\punto de venta.application
+C:\PUNTO-DE-VENTA\bin\Debug\punto de venta.exe
+C:\PUNTO-DE-VENTA\bin\Debug\punto de venta.pdb
+C:\PUNTO-DE-VENTA\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\PUNTO-DE-VENTA\bin\Debug\CrystalDecisions.Shared.dll
+C:\PUNTO-DE-VENTA\bin\Debug\log4net.dll
+C:\PUNTO-DE-VENTA\bin\Debug\log4net.xml
+C:\PUNTO-DE-VENTA\bin\Debug\cs\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\da\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\de\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\en\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\es\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\fi\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\fr\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\hu\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\it\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\ja\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\ko\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\nl\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\pl\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\pt\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\ru\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\sk\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\sv\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\th\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\tr\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\bin\Debug\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.csproj.AssemblyReference.cache
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmacercade.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmauditoria.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmclientes.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmcompras.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmempleados.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmlogin.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmmenu.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmproductos.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmproveedores.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmrespaldo.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmventa.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmventas.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Properties.Resources.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.csproj.GenerateResource.cache
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.csproj.CoreCompileInputs.cache
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.exe.manifest
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.application
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.csproj.CopyComplete
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.exe
+C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.pdb

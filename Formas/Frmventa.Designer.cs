@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmventa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtcambio = new System.Windows.Forms.TextBox();
             this.lblcambio = new System.Windows.Forms.Label();
             this.txtpago = new System.Windows.Forms.TextBox();
@@ -48,10 +48,6 @@
             this.btndeshacer = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.btntotalizar = new System.Windows.Forms.Button();
-            this.txtimporte = new System.Windows.Forms.TextBox();
-            this.lblimporte = new System.Windows.Forms.Label();
-            this.txtcant = new System.Windows.Forms.TextBox();
-            this.lblcant = new System.Windows.Forms.Label();
             this.txtpreciounit = new System.Windows.Forms.TextBox();
             this.lblpreciounit = new System.Windows.Forms.Label();
             this.lblnombre2 = new System.Windows.Forms.Label();
@@ -70,21 +66,18 @@
             this.btnmenuventa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvventas = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnproductos = new System.Windows.Forms.Button();
             this.txtnombre2 = new System.Windows.Forms.TextBox();
             this.btnquitar = new System.Windows.Forms.Button();
-            this.btnagregar = new System.Windows.Forms.Button();
             this.cboxcliente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cboxproducto = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpboxtipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -122,6 +115,7 @@
             this.txtpago.Name = "txtpago";
             this.txtpago.Size = new System.Drawing.Size(156, 30);
             this.txtpago.TabIndex = 77;
+            this.txtpago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpago_KeyPress);
             // 
             // lblpago
             // 
@@ -308,55 +302,11 @@
             this.btntotalizar.UseVisualStyleBackColor = true;
             this.btntotalizar.Click += new System.EventHandler(this.btntotalizar_Click);
             // 
-            // txtimporte
-            // 
-            this.txtimporte.Enabled = false;
-            this.txtimporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtimporte.Location = new System.Drawing.Point(1165, 404);
-            this.txtimporte.Margin = new System.Windows.Forms.Padding(4);
-            this.txtimporte.Name = "txtimporte";
-            this.txtimporte.Size = new System.Drawing.Size(115, 30);
-            this.txtimporte.TabIndex = 63;
-            this.txtimporte.Visible = false;
-            // 
-            // lblimporte
-            // 
-            this.lblimporte.AutoSize = true;
-            this.lblimporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblimporte.Location = new System.Drawing.Point(1080, 408);
-            this.lblimporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblimporte.Name = "lblimporte";
-            this.lblimporte.Size = new System.Drawing.Size(83, 25);
-            this.lblimporte.TabIndex = 62;
-            this.lblimporte.Text = "Importe:";
-            this.lblimporte.Visible = false;
-            // 
-            // txtcant
-            // 
-            this.txtcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcant.Location = new System.Drawing.Point(941, 404);
-            this.txtcant.Margin = new System.Windows.Forms.Padding(4);
-            this.txtcant.Name = "txtcant";
-            this.txtcant.Size = new System.Drawing.Size(115, 30);
-            this.txtcant.TabIndex = 61;
-            this.txtcant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcant_KeyPress);
-            // 
-            // lblcant
-            // 
-            this.lblcant.AutoSize = true;
-            this.lblcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcant.Location = new System.Drawing.Point(879, 408);
-            this.lblcant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblcant.Name = "lblcant";
-            this.lblcant.Size = new System.Drawing.Size(60, 25);
-            this.lblcant.TabIndex = 60;
-            this.lblcant.Text = "Cant:";
-            // 
             // txtpreciounit
             // 
             this.txtpreciounit.Enabled = false;
             this.txtpreciounit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpreciounit.Location = new System.Drawing.Point(750, 404);
+            this.txtpreciounit.Location = new System.Drawing.Point(754, 404);
             this.txtpreciounit.Margin = new System.Windows.Forms.Padding(4);
             this.txtpreciounit.Name = "txtpreciounit";
             this.txtpreciounit.Size = new System.Drawing.Size(115, 30);
@@ -366,7 +316,7 @@
             // 
             this.lblpreciounit.AutoSize = true;
             this.lblpreciounit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpreciounit.Location = new System.Drawing.Point(639, 409);
+            this.lblpreciounit.Location = new System.Drawing.Point(637, 410);
             this.lblpreciounit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpreciounit.Name = "lblpreciounit";
             this.lblpreciounit.Size = new System.Drawing.Size(109, 25);
@@ -549,72 +499,33 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nombre,
-            this.importe,
-            this.cant,
             this.precio});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvventas.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvventas.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvventas.Location = new System.Drawing.Point(255, 461);
             this.dgvventas.Name = "dgvventas";
             this.dgvventas.RowHeadersWidth = 51;
             this.dgvventas.RowTemplate.Height = 24;
             this.dgvventas.Size = new System.Drawing.Size(1025, 206);
             this.dgvventas.TabIndex = 84;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.MinimumWidth = 12;
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 120F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // importe
-            // 
-            this.importe.HeaderText = "Precio Unit";
-            this.importe.MinimumWidth = 6;
-            this.importe.Name = "importe";
-            this.importe.ReadOnly = true;
-            // 
-            // cant
-            // 
-            this.cant.FillWeight = 60F;
-            this.cant.HeaderText = "Cant";
-            this.cant.MinimumWidth = 6;
-            this.cant.Name = "cant";
-            this.cant.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Importe";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
             // 
             // panel1
             // 
@@ -665,7 +576,7 @@
             this.btnquitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnquitar.Image = ((System.Drawing.Image)(resources.GetObject("btnquitar.Image")));
             this.btnquitar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnquitar.Location = new System.Drawing.Point(1286, 576);
+            this.btnquitar.Location = new System.Drawing.Point(1286, 518);
             this.btnquitar.Name = "btnquitar";
             this.btnquitar.Size = new System.Drawing.Size(121, 91);
             this.btnquitar.TabIndex = 79;
@@ -673,21 +584,6 @@
             this.btnquitar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnquitar.UseVisualStyleBackColor = true;
             this.btnquitar.Click += new System.EventHandler(this.btnquitar_Click);
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Image = ((System.Drawing.Image)(resources.GetObject("btnagregar.Image")));
-            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnagregar.Location = new System.Drawing.Point(1284, 461);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(121, 91);
-            this.btnagregar.TabIndex = 80;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnagregar.UseVisualStyleBackColor = true;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // cboxcliente
             // 
@@ -731,6 +627,28 @@
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.MinimumWidth = 12;
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.FillWeight = 120F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio Unit";
+            this.precio.MinimumWidth = 6;
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
             // Frmventa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -741,7 +659,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboxcliente);
             this.Controls.Add(this.btnquitar);
-            this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.txtnombre2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -761,10 +678,6 @@
             this.Controls.Add(this.btndeshacer);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.btntotalizar);
-            this.Controls.Add(this.txtimporte);
-            this.Controls.Add(this.lblimporte);
-            this.Controls.Add(this.txtcant);
-            this.Controls.Add(this.lblcant);
             this.Controls.Add(this.txtpreciounit);
             this.Controls.Add(this.lblpreciounit);
             this.Controls.Add(this.lblnombre2);
@@ -813,10 +726,6 @@
         private System.Windows.Forms.Button btndeshacer;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btntotalizar;
-        private System.Windows.Forms.TextBox txtimporte;
-        private System.Windows.Forms.Label lblimporte;
-        private System.Windows.Forms.TextBox txtcant;
-        private System.Windows.Forms.Label lblcant;
         private System.Windows.Forms.TextBox txtpreciounit;
         private System.Windows.Forms.Label lblpreciounit;
         private System.Windows.Forms.Label lblnombre2;
@@ -841,15 +750,12 @@
         private System.Windows.Forms.RadioButton rdbtncredito;
         private System.Windows.Forms.TextBox txtnombre2;
         private System.Windows.Forms.Button btnquitar;
-        private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.ComboBox cboxcliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboxproducto;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn importe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cant;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.Button button1;
     }
 }

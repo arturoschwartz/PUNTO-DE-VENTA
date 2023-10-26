@@ -22,7 +22,7 @@ namespace punto_de_venta.Formas
         {
             InitializeComponent();
             suma();
-            //cargar_cboxproducto();
+            cargar_cboxproducto();
             cargar_cboxcliente();
             
         }
@@ -127,18 +127,8 @@ namespace punto_de_venta.Formas
                     txtcodigo.Text = leer["pr_clave"].ToString();
                     txtnombre2.Text = leer["pr_nombre"].ToString();
                     txtpreciounit.Text = leer["pr_precio"].ToString();
-
-                    txtcant.Focus();
-
-                    txtimporte.Text = (Convert.ToDouble(txtpreciounit.Text) * Convert.ToDouble(txtcant.Text)).ToString("N2");
-                    txtimporte.Enabled = false;
-
-                    dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcant.Text, txtimporte.Text);
+                    dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text);
                     txtcodigo.Clear();
-                    txtnombre2.Clear();
-                    txtpreciounit.Clear();
-                    txtcant.Clear();
-                    txtimporte.Clear();
                     suma();
                     txtcodigo.Focus();
                 }
@@ -152,28 +142,10 @@ namespace punto_de_venta.Formas
             txtcodigo.Clear();
             txtnombre2.Clear() ;
             txtpreciounit.Clear();
-            txtcant.Clear();
-            txtimporte.Clear();
-        }
+            txtcodigo.Focus();
+            txtpago.Clear();
+            txtcambio.Clear();
 
-        private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 13)
-            {
-                //convierto los textos a double y despues el resultado a texto con tostring
-                //el complemento "N2 se determina que reconozca los decimales en el resultado"
-                /*txtimporte.Text = (Convert.ToDouble(txtpreciounit.Text) * Convert.ToDouble(txtcant.Text)).ToString("N2");
-                txtimporte.Enabled = false;
-
-                dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcant.Text, txtimporte.Text);
-                txtcodigo.Clear();
-                txtnombre2.Clear();
-                txtpreciounit.Clear();
-                txtcant.Clear();
-                txtimporte.Clear();
-                suma();
-                txtcodigo.Focus();*/
-            }
         }
         
 
@@ -188,18 +160,6 @@ namespace punto_de_venta.Formas
             
         }
 
-        private void btnagregar_Click(object sender, EventArgs e)
-        {
-            dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcant.Text, txtimporte.Text);
-            txtcodigo.Clear();
-            txtnombre2.Clear();
-            txtpreciounit.Clear();
-            txtcant.Clear();
-            txtimporte.Clear();
-            suma();
-            txtcodigo.Focus();
-        }
-
         private void btnquitar_Click(object sender, EventArgs e)
         {
             if (dgvventas.RowCount > 1)
@@ -208,6 +168,7 @@ namespace punto_de_venta.Formas
                 suma();
                 txtcodigo.Focus();
             }
+            txtcodigo.Focus();
         }
 
         private void btntotalizar_Click(object sender, EventArgs e)
@@ -222,7 +183,7 @@ namespace punto_de_venta.Formas
             }
         }
 
-        /*public void cargar_cboxproducto()
+        public void cargar_cboxproducto()
         {
             objconexion = new Clases.conexion();
             conexion = new SqlConnection(objconexion.conn());
@@ -240,7 +201,7 @@ namespace punto_de_venta.Formas
             cboxproducto.ValueMember = "pr_nombre";
             cboxproducto.DisplayMember = "pr_nombre";
             cboxproducto.DataSource = dataTable;
-        }*/
+        }
 
         public void cargar_cboxcliente()
         {
@@ -260,6 +221,21 @@ namespace punto_de_venta.Formas
             cboxcliente.ValueMember = "cl_nombre";
             cboxcliente.DisplayMember = "cl_nombre";
             cboxcliente.DataSource = dataTable;
+        }
+
+        private void txtpago_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                try
+                {
+                    txtcambio.Text = (float.Parse(txtpago.Text) - float.Parse(txttotal.Text)).ToString();
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }
