@@ -343,14 +343,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="punto de venta.exe" size="416800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="punto de venta.exe" size="424992">
       <assemblyIdentity name="punto de venta" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QDiwm4NKJ/0LPRyjLJm+gs7x7tBgYMdI8c5l5PturKI=</dsig:DigestValue>
+        <dsig:DigestValue>SynfadPqGEDwxsjMmKnOJEHrG0yRiOCzlXguz/omj7c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmempleados));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btncerrar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.btnguardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvempleados = new System.Windows.Forms.DataGridView();
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,16 +56,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtdomicilio = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtclave = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnactualizar = new System.Windows.Forms.Button();
             this.btnbaja = new System.Windows.Forms.Button();
-            this.txtdomicilio = new System.Windows.Forms.TextBox();
-            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.Deshacer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,10 +76,10 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(1072, 673);
+            this.btncerrar.Location = new System.Drawing.Point(1211, 671);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(146, 97);
+            this.btncerrar.Size = new System.Drawing.Size(121, 97);
             this.btncerrar.TabIndex = 90;
             this.btncerrar.Text = "Salir";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -91,10 +93,10 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(569, 673);
+            this.btneliminar.Location = new System.Drawing.Point(637, 671);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(146, 97);
+            this.btneliminar.Size = new System.Drawing.Size(121, 97);
             this.btneliminar.TabIndex = 89;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -219,13 +221,14 @@
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnguardar.Location = new System.Drawing.Point(731, 673);
+            this.btnguardar.Location = new System.Drawing.Point(784, 671);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(146, 97);
+            this.btnguardar.Size = new System.Drawing.Size(121, 97);
             this.btnguardar.TabIndex = 96;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // panel1
             // 
@@ -247,33 +250,41 @@
             this.panel2.Size = new System.Drawing.Size(153, 704);
             this.panel2.TabIndex = 99;
             // 
-            // dataGridView1
+            // dgvempleados
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvempleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvempleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvempleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvempleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clave,
             this.nombre,
             this.domicilio,
             this.localidad,
             this.telefono,
             this.email});
-            this.dataGridView1.Location = new System.Drawing.Point(622, 249);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(815, 364);
-            this.dataGridView1.TabIndex = 100;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvempleados.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvempleados.Location = new System.Drawing.Point(622, 249);
+            this.dgvempleados.Name = "dgvempleados";
+            this.dgvempleados.RowHeadersWidth = 51;
+            this.dgvempleados.RowTemplate.Height = 24;
+            this.dgvempleados.Size = new System.Drawing.Size(815, 364);
+            this.dgvempleados.TabIndex = 100;
             // 
             // clave
             // 
@@ -364,6 +375,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta Por";
             // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(119, 90);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(291, 30);
+            this.txtnombre.TabIndex = 89;
+            // 
+            // txtdomicilio
+            // 
+            this.txtdomicilio.Enabled = false;
+            this.txtdomicilio.Location = new System.Drawing.Point(119, 134);
+            this.txtdomicilio.Name = "txtdomicilio";
+            this.txtdomicilio.Size = new System.Drawing.Size(291, 30);
+            this.txtdomicilio.TabIndex = 88;
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -403,13 +429,14 @@
             this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Image")));
             this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnactualizar.Location = new System.Drawing.Point(404, 673);
+            this.btnactualizar.Location = new System.Drawing.Point(1071, 671);
             this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(146, 97);
+            this.btnactualizar.Size = new System.Drawing.Size(121, 97);
             this.btnactualizar.TabIndex = 104;
             this.btnactualizar.Text = "Actualizar";
             this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btnbaja
             // 
@@ -418,39 +445,42 @@
             this.btnbaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbaja.Image = ((System.Drawing.Image)(resources.GetObject("btnbaja.Image")));
             this.btnbaja.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbaja.Location = new System.Drawing.Point(895, 673);
+            this.btnbaja.Location = new System.Drawing.Point(927, 671);
             this.btnbaja.Name = "btnbaja";
-            this.btnbaja.Size = new System.Drawing.Size(146, 97);
+            this.btnbaja.Size = new System.Drawing.Size(121, 97);
             this.btnbaja.TabIndex = 105;
             this.btnbaja.Text = "Baja";
             this.btnbaja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbaja.UseVisualStyleBackColor = true;
             // 
-            // txtdomicilio
+            // Deshacer
             // 
-            this.txtdomicilio.Location = new System.Drawing.Point(119, 134);
-            this.txtdomicilio.Name = "txtdomicilio";
-            this.txtdomicilio.Size = new System.Drawing.Size(291, 30);
-            this.txtdomicilio.TabIndex = 88;
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(119, 90);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(291, 30);
-            this.txtnombre.TabIndex = 89;
+            this.Deshacer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Deshacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deshacer.Image = ((System.Drawing.Image)(resources.GetObject("Deshacer.Image")));
+            this.Deshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Deshacer.Location = new System.Drawing.Point(495, 673);
+            this.Deshacer.Margin = new System.Windows.Forms.Padding(4);
+            this.Deshacer.Name = "Deshacer";
+            this.Deshacer.Size = new System.Drawing.Size(121, 95);
+            this.Deshacer.TabIndex = 106;
+            this.Deshacer.Text = "Deshacer";
+            this.Deshacer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Deshacer.UseVisualStyleBackColor = true;
+            this.Deshacer.Click += new System.EventHandler(this.Deshacer_Click);
             // 
             // Frmempleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1449, 804);
+            this.Controls.Add(this.Deshacer);
             this.Controls.Add(this.btnbaja);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvempleados);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnguardar);
@@ -464,7 +494,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -488,7 +518,7 @@
         private System.Windows.Forms.Button btnmenuempleados;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvempleados;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -505,5 +535,6 @@
         private System.Windows.Forms.Button btnbaja;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtdomicilio;
+        private System.Windows.Forms.Button Deshacer;
     }
 }

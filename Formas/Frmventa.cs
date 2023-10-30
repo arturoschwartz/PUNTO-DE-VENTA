@@ -6,9 +6,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace punto_de_venta.Formas
@@ -18,15 +21,15 @@ namespace punto_de_venta.Formas
         Clases.conexion objconexion;
         SqlConnection conexion;
         int existe;
+        
         public Frmventa()
         {
             InitializeComponent();
             suma();
-            cargar_cboxproducto();
-            cargar_cboxcliente();
+            
+            
             
         }
-
         private void btnmenuventa_Click(object sender, EventArgs e)
         {
             Formas.Frmmenu x = new Formas.Frmmenu();
@@ -104,7 +107,9 @@ namespace punto_de_venta.Formas
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13)
+            
+            
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 if (string.IsNullOrEmpty(txtcodigo.Text))
                 {
@@ -113,30 +118,34 @@ namespace punto_de_venta.Formas
                 objconexion = new Clases.conexion();
                 conexion = new SqlConnection(objconexion.conn());
                 conexion.Open();
-                string query = "select * from Productos where pr_clave=@pr_clave";
+                string query = "select * from Productos where pto_clave=@pto_clave";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@pr_clave", txtcodigo.Text);
-                comando.Parameters.AddWithValue("@pr_nombre", txtnombre2.Text);
-                comando.Parameters.AddWithValue("@pr_precio", txtpreciounit.Text);
-
+                comando.Parameters.AddWithValue("@pto_clave", txtcodigo.Text);
+                comando.Parameters.AddWithValue("@pto_nombre", txtnombre2.Text);
+                comando.Parameters.AddWithValue("@pto_precio", txtpreciounit.Text);
                 SqlDataReader leer = comando.ExecuteReader();
                 if (leer.Read())
                 {
+                    
                     existe = 1;
-                    txtcodigo.Text = leer["pr_clave"].ToString();
-                    txtnombre2.Text = leer["pr_nombre"].ToString();
-                    txtpreciounit.Text = leer["pr_precio"].ToString();
-                    dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text);
+                    txtcodigo.Text = leer["pto_clave"].ToString();
+                    txtnombre2.Text = leer["pto_nombre"].ToString();
+                    txtpreciounit.Text = leer["pto_precio"].ToString();
+                    txtcantidad.Text = "1";
+                    txtcantidad.Focus();
+                    txtimporte.Clear();
+                }
+                else
+                {
+                    existe = 0;
+                    MessageBox.Show("Error: articulo no encontrado", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtcodigo.Clear();
-                    suma();
                     txtcodigo.Focus();
                 }
-                conexion.Close();
-
+                
             }
         }
-
         private void btndeshacer_Click(object sender, EventArgs e)
         {
             txtcodigo.Clear();
@@ -145,7 +154,12 @@ namespace punto_de_venta.Formas
             txtcodigo.Focus();
             txtpago.Clear();
             txtcambio.Clear();
-
+            this.dgvventas.Rows.Clear();
+            txttotal.Clear();
+            suma();
+            txtpreciounit.Enabled = false;
+            txtcantidad.Clear();
+            txtimporte.Clear();
         }
         
 
@@ -154,9 +168,14 @@ namespace punto_de_venta.Formas
             double total = 0;
             foreach (DataGridViewRow row in dgvventas.Rows)
             {
-                total += Convert.ToDouble(row.Cells["precio"].Value);
+                total += Convert.ToDouble(row.Cells["importe"].Value);
+                
             }
             txttotal.Text = total.ToString("N2");
+        }
+
+        private void producto_total()
+        {
             
         }
 
@@ -177,50 +196,10 @@ namespace punto_de_venta.Formas
             {
                 txtcambio.Text = (float.Parse(txtpago.Text) - float.Parse(txttotal.Text)).ToString();
             }
-            catch
+            catch (Exception)
             {
-
+                return;
             }
-        }
-
-        public void cargar_cboxproducto()
-        {
-            objconexion = new Clases.conexion();
-            conexion = new SqlConnection(objconexion.conn());
-            conexion.Open();
-            SqlCommand command = new SqlCommand("SELECT pr_nombre from Productos", conexion);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            conexion.Close();
-
-            DataRow fila = dataTable.NewRow();
-            fila["pr_nombre"] = "Seleccione un Producto";
-            dataTable.Rows.InsertAt(fila, 0);
-
-            cboxproducto.ValueMember = "pr_nombre";
-            cboxproducto.DisplayMember = "pr_nombre";
-            cboxproducto.DataSource = dataTable;
-        }
-
-        public void cargar_cboxcliente()
-        {
-            objconexion = new Clases.conexion();
-            conexion = new SqlConnection(objconexion.conn());
-            conexion.Open();
-            SqlCommand command = new SqlCommand("SELECT cl_nombre from Clientes", conexion);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            conexion.Close();
-
-            DataRow fila = dataTable.NewRow();
-            fila["cl_nombre"] = "Seleccione un Cliente";
-            dataTable.Rows.InsertAt(fila, 0);
-
-            cboxcliente.ValueMember = "cl_nombre";
-            cboxcliente.DisplayMember = "cl_nombre";
-            cboxcliente.DataSource = dataTable;
         }
 
         private void txtpago_KeyPress(object sender, KeyPressEventArgs e)
@@ -230,12 +209,79 @@ namespace punto_de_venta.Formas
                 try
                 {
                     txtcambio.Text = (float.Parse(txtpago.Text) - float.Parse(txttotal.Text)).ToString();
+                      
                 }
-                catch
+                catch (Exception)
                 {
-
+                    return;
                 }
             }
+        }
+
+        private void btnbuscarproduc_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //convierto los textos a double y despues el resultado a texto con tostring
+                //el complemento "N2 se determina que reconozca los decimales en el resultado"
+                txtimporte.Text = (Convert.ToDouble(txtpreciounit.Text) * Convert.ToDouble(txtcantidad.Text)).ToString("N2");
+                dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
+                suma();
+                txtcantidad.Clear();
+                txtcodigo.Clear();
+                txtimporte.Clear();
+                txtnombre2.Clear();
+                txtpreciounit.Clear();
+                txtcodigo.Focus();
+                
+            }
+        }
+
+        private void txtnombre2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
+                txtcodigo.Focus();
+                txtcodigo.Clear();
+                txtnombre2.Clear();
+                txtpreciounit.Clear();
+                txtcantidad.Clear();
+                txtimporte.Clear();
+                
+            }
+        }
+
+        private void txtproducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                objconexion = new Clases.conexion();
+                conexion = new SqlConnection(objconexion.conn());
+                conexion.Open();
+                SqlCommand comando = new SqlCommand("select  from pto_clave, pto_nombre Productos where pto_nombre=" + txtproducto.Text, conexion);
+                comando.Parameters.Clear();
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@pto_clave", txtcodigo.Text);
+                comando.Parameters.AddWithValue("@pto_nombre", txtnombre2.Text);
+               
+                SqlDataReader leer = comando.ExecuteReader();
+                if (leer.Read())
+                {
+                    existe = 1;
+                    txtcodigo.Text = leer["pto_clave"].ToString();
+                    txtnombre2.Text = leer["pto_nombre"].ToString();
+
+                }
+                conexion.Close();
+            }
+            
         }
     }
 }

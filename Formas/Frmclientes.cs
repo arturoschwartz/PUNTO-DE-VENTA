@@ -64,6 +64,7 @@ namespace punto_de_venta.Formas
                     txtlocalidad.Text = leer["cl_localidad"].ToString();
                     txttelefono.Text = leer["cl_telefono"].ToString();
                     txtemail.Text = leer["cl_email"].ToString();
+                    dgvcliente.Rows.Add(txtclave.Text, txtnombre.Text, txtdomicilio.Text, txtlocalidad.Text, txttelefono.Text, txtemail.Text);
 
                     btnactualizar.Enabled = true;
                     btneliminar.Enabled = true;
@@ -83,12 +84,19 @@ namespace punto_de_venta.Formas
                 {
                     if (MessageBox.Show("Cliente no registrado, deseas agregar?", "Atencion!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
                     {
+                        existe = 0;
                         btnguardar.Enabled = true;
                         txtnombre.Enabled = true;
                         txtdomicilio.Enabled = true;
                         txtlocalidad.Enabled = true;
                         txttelefono.Enabled = true;
                         txtemail.Enabled = true;
+                        txtclave.Enabled = false;
+                        txtnombre.Clear();
+                        txtdomicilio.Clear();
+                        txtlocalidad.Clear();
+                        txttelefono.Clear();
+                        txtemail.Clear();
 
 
                     }
@@ -114,6 +122,8 @@ namespace punto_de_venta.Formas
                 comando.Parameters.AddWithValue("@cl_telefono", this.txttelefono.Text);
                 comando.Parameters.AddWithValue("@cl_email", this.txtemail.Text);
                 comando.ExecuteNonQuery();
+
+                dgvcliente.Rows.Add(txtclave.Text, txtnombre.Text, txtdomicilio.Text, txtlocalidad.Text, txttelefono.Text, txtemail.Text);
                 MessageBox.Show("REGISTRO EXITOSO", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 btnguardar.Enabled = true;
@@ -126,6 +136,12 @@ namespace punto_de_venta.Formas
                 txtlocalidad.Clear();
                 txttelefono.Clear();
                 txtemail.Clear();
+                txtclave.Enabled = true;
+                txtnombre.Enabled = true;
+                txtdomicilio.Enabled = false;
+                txtlocalidad.Enabled = false;
+                txttelefono.Enabled = false;
+                txtemail.Enabled = false;
                 
             }
             conexion.Close();
@@ -155,7 +171,13 @@ namespace punto_de_venta.Formas
                 txttelefono.Clear();
                 txtemail.Clear();
                 txtclave.Focus();
-
+                txtclave.Enabled = true;
+                txtnombre.Enabled = true;
+                txtdomicilio.Enabled = false;
+                txtlocalidad.Enabled = false;
+                txttelefono.Enabled = false;
+                txtemail.Enabled = false;
+                txtclave.Focus();
 
             }
             conexion.Close();
@@ -169,7 +191,36 @@ namespace punto_de_venta.Formas
             txtlocalidad.Clear();
             txttelefono.Clear();
             txtemail.Clear();
+            txtclave.Enabled = true;
+            txtnombre.Enabled = true;
+            txtdomicilio.Enabled = false;
+            txtlocalidad.Enabled = false;
+            txttelefono.Enabled = false;
+            txtemail.Enabled = false;
             txtclave.Focus();
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            if (existe == 1)
+            {
+                objconexion = new Clases.conexion();
+                conexion = new SqlConnection(objconexion.conn());
+                conexion.Open();
+                string query = "update Clientes set cl_nombre=@cl_nombre, cl_domicilio=@cl_domicilio, cl_localidad=@cl_localidad, cl_telefono=@cl_telefono, cl_email=@cl_email  where cl_clave=@cl_clave";
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@cl_clave", this.txtclave.Text);
+                comando.Parameters.AddWithValue("@cl_nombre", this.txtnombre.Text);
+                comando.Parameters.AddWithValue("@cl_domicilio", this.txtdomicilio.Text);
+                comando.Parameters.AddWithValue("@cl_localidad", this.txtlocalidad.Text);
+                comando.Parameters.AddWithValue("@cl_telefono", this.txttelefono.Text);
+                comando.Parameters.AddWithValue("@cl_email", this.txtemail.Text);
+                comando.ExecuteNonQuery();
+                dgvcliente.Rows.Add(txtclave.Text, txtnombre.Text, txtdomicilio.Text, txtlocalidad.Text, txttelefono.Text, txtemail.Text);
+                MessageBox.Show("ACTUALIZACION EXITOSA", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
         }
     }
     
