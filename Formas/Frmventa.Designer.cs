@@ -67,11 +67,6 @@
             this.btnmenuventa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvventas = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnproductos = new System.Windows.Forms.Button();
@@ -85,6 +80,11 @@
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.txtimporte = new System.Windows.Forms.TextBox();
             this.txtproducto = new System.Windows.Forms.TextBox();
+            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpboxtipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -292,6 +292,7 @@
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btntotalizar
             // 
@@ -538,42 +539,6 @@
             this.dgvventas.Size = new System.Drawing.Size(1025, 206);
             this.dgvventas.TabIndex = 84;
             // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.MinimumWidth = 12;
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 120F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio Unit";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 6;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // importe
-            // 
-            this.importe.HeaderText = "Importe";
-            this.importe.MinimumWidth = 6;
-            this.importe.Name = "importe";
-            this.importe.ReadOnly = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -716,6 +681,42 @@
             this.txtproducto.TabIndex = 99;
             this.txtproducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtproducto_KeyPress);
             // 
+            // importe
+            // 
+            this.importe.HeaderText = "Importe";
+            this.importe.MinimumWidth = 6;
+            this.importe.Name = "importe";
+            this.importe.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio Unit";
+            this.precio.MinimumWidth = 6;
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.FillWeight = 120F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.MinimumWidth = 12;
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
             // Frmventa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -824,15 +825,15 @@
         private System.Windows.Forms.ComboBox cboxcliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnbuscarproduc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.TextBox txtimporte;
+        private System.Windows.Forms.TextBox txtproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
-        private System.Windows.Forms.TextBox txtproducto;
     }
 }

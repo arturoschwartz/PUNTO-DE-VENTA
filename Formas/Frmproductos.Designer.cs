@@ -37,7 +37,6 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.txtprecioventa = new System.Windows.Forms.TextBox();
-            this.txtexistencia = new System.Windows.Forms.TextBox();
             this.lblprecioventa = new System.Windows.Forms.Label();
             this.lblexistencia = new System.Windows.Forms.Label();
             this.btnguaradar = new System.Windows.Forms.Button();
@@ -45,6 +44,9 @@
             this.btnmenuproductos = new System.Windows.Forms.Button();
             this.btnventasproductos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtexistencia = new System.Windows.Forms.TextBox();
+            this.txtcosto = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblnombre1 = new System.Windows.Forms.Label();
@@ -52,17 +54,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvproductos = new System.Windows.Forms.DataGridView();
-            this.btnactualizar = new System.Windows.Forms.Button();
-            this.btndeshacer = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtcosto = new System.Windows.Forms.TextBox();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboxestatus = new System.Windows.Forms.ComboBox();
+            this.btnactualizar = new System.Windows.Forms.Button();
+            this.btndeshacer = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,7 +73,7 @@
             this.btncerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncerrar.Location = new System.Drawing.Point(1279, 608);
+            this.btncerrar.Location = new System.Drawing.Point(1278, 580);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(122, 93);
@@ -92,7 +90,7 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(992, 608);
+            this.btneliminar.Location = new System.Drawing.Point(991, 580);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(122, 93);
@@ -108,7 +106,7 @@
             this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnbuscar.Image")));
             this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbuscar.Location = new System.Drawing.Point(1136, 608);
+            this.btnbuscar.Location = new System.Drawing.Point(1135, 580);
             this.btnbuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(122, 93);
@@ -122,28 +120,18 @@
             // 
             this.txtprecioventa.Enabled = false;
             this.txtprecioventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecioventa.Location = new System.Drawing.Point(180, 197);
+            this.txtprecioventa.Location = new System.Drawing.Point(158, 188);
             this.txtprecioventa.Margin = new System.Windows.Forms.Padding(4);
             this.txtprecioventa.Name = "txtprecioventa";
-            this.txtprecioventa.Size = new System.Drawing.Size(150, 30);
+            this.txtprecioventa.Size = new System.Drawing.Size(165, 30);
             this.txtprecioventa.TabIndex = 82;
             this.txtprecioventa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioventa_KeyPress);
-            // 
-            // txtexistencia
-            // 
-            this.txtexistencia.Enabled = false;
-            this.txtexistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtexistencia.Location = new System.Drawing.Point(145, 145);
-            this.txtexistencia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtexistencia.Name = "txtexistencia";
-            this.txtexistencia.Size = new System.Drawing.Size(185, 30);
-            this.txtexistencia.TabIndex = 81;
             // 
             // lblprecioventa
             // 
             this.lblprecioventa.AutoSize = true;
             this.lblprecioventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprecioventa.Location = new System.Drawing.Point(27, 202);
+            this.lblprecioventa.Location = new System.Drawing.Point(5, 193);
             this.lblprecioventa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprecioventa.Name = "lblprecioventa";
             this.lblprecioventa.Size = new System.Drawing.Size(141, 25);
@@ -154,7 +142,7 @@
             // 
             this.lblexistencia.AutoSize = true;
             this.lblexistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblexistencia.Location = new System.Drawing.Point(30, 148);
+            this.lblexistencia.Location = new System.Drawing.Point(5, 139);
             this.lblexistencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblexistencia.Name = "lblexistencia";
             this.lblexistencia.Size = new System.Drawing.Size(107, 25);
@@ -168,7 +156,7 @@
             this.btnguaradar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguaradar.Image = ((System.Drawing.Image)(resources.GetObject("btnguaradar.Image")));
             this.btnguaradar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnguaradar.Location = new System.Drawing.Point(848, 608);
+            this.btnguaradar.Location = new System.Drawing.Point(847, 580);
             this.btnguaradar.Name = "btnguaradar";
             this.btnguaradar.Size = new System.Drawing.Size(122, 93);
             this.btnguaradar.TabIndex = 88;
@@ -195,7 +183,7 @@
             this.btnmenuproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnmenuproductos.Location = new System.Drawing.Point(12, 356);
             this.btnmenuproductos.Name = "btnmenuproductos";
-            this.btnmenuproductos.Size = new System.Drawing.Size(111, 115);
+            this.btnmenuproductos.Size = new System.Drawing.Size(124, 117);
             this.btnmenuproductos.TabIndex = 93;
             this.btnmenuproductos.Text = "Menu";
             this.btnmenuproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -209,7 +197,7 @@
             this.btnventasproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnventasproductos.Location = new System.Drawing.Point(12, 220);
             this.btnventasproductos.Name = "btnventasproductos";
-            this.btnventasproductos.Size = new System.Drawing.Size(111, 115);
+            this.btnventasproductos.Size = new System.Drawing.Size(124, 112);
             this.btnventasproductos.TabIndex = 92;
             this.btnventasproductos.Text = "Venta";
             this.btnventasproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -219,39 +207,62 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Controls.Add(this.cboxestatus);
+            this.groupBox1.Controls.Add(this.txtexistencia);
             this.groupBox1.Controls.Add(this.txtcosto);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Controls.Add(this.lblnombre1);
             this.groupBox1.Controls.Add(this.lblcodigo);
-            this.groupBox1.Controls.Add(this.txtexistencia);
             this.groupBox1.Controls.Add(this.lblexistencia);
             this.groupBox1.Controls.Add(this.lblprecioventa);
             this.groupBox1.Controls.Add(this.txtprecioventa);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(155, 181);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 345);
+            this.groupBox1.Size = new System.Drawing.Size(340, 332);
             this.groupBox1.TabIndex = 93;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Consulta";
             // 
+            // txtexistencia
+            // 
+            this.txtexistencia.Enabled = false;
+            this.txtexistencia.Location = new System.Drawing.Point(119, 139);
+            this.txtexistencia.Name = "txtexistencia";
+            this.txtexistencia.Size = new System.Drawing.Size(199, 30);
+            this.txtexistencia.TabIndex = 101;
+            // 
+            // txtcosto
+            // 
+            this.txtcosto.Enabled = false;
+            this.txtcosto.Location = new System.Drawing.Point(158, 244);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.Size = new System.Drawing.Size(165, 30);
+            this.txtcosto.TabIndex = 85;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 244);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 25);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Precio Costo $";
+            // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(123, 93);
+            this.txtnombre.Location = new System.Drawing.Point(99, 93);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(207, 30);
+            this.txtnombre.Size = new System.Drawing.Size(219, 30);
             this.txtnombre.TabIndex = 83;
             // 
             // txtcodigo
             // 
             this.txtcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcodigo.Location = new System.Drawing.Point(123, 44);
+            this.txtcodigo.Location = new System.Drawing.Point(92, 44);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(207, 30);
+            this.txtcodigo.Size = new System.Drawing.Size(226, 30);
             this.txtcodigo.TabIndex = 2;
             this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
@@ -259,7 +270,7 @@
             // 
             this.lblnombre1.AutoSize = true;
             this.lblnombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre1.Location = new System.Drawing.Point(30, 93);
+            this.lblnombre1.Location = new System.Drawing.Point(6, 93);
             this.lblnombre1.Name = "lblnombre1";
             this.lblnombre1.Size = new System.Drawing.Size(87, 25);
             this.lblnombre1.TabIndex = 1;
@@ -269,7 +280,7 @@
             // 
             this.lblcodigo.AutoSize = true;
             this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.Location = new System.Drawing.Point(36, 47);
+            this.lblcodigo.Location = new System.Drawing.Point(5, 47);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.Size = new System.Drawing.Size(81, 25);
             this.lblcodigo.TabIndex = 0;
@@ -324,7 +335,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvproductos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvproductos.Location = new System.Drawing.Point(527, 181);
+            this.dgvproductos.Location = new System.Drawing.Point(501, 181);
             this.dgvproductos.Name = "dgvproductos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -338,55 +349,8 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Blue;
             this.dgvproductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvproductos.RowTemplate.Height = 24;
-            this.dgvproductos.Size = new System.Drawing.Size(874, 345);
+            this.dgvproductos.Size = new System.Drawing.Size(900, 332);
             this.dgvproductos.TabIndex = 96;
-            // 
-            // btnactualizar
-            // 
-            this.btnactualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnactualizar.Enabled = false;
-            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Image")));
-            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnactualizar.Location = new System.Drawing.Point(699, 608);
-            this.btnactualizar.Name = "btnactualizar";
-            this.btnactualizar.Size = new System.Drawing.Size(122, 93);
-            this.btnactualizar.TabIndex = 97;
-            this.btnactualizar.Text = "Actualizar";
-            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnactualizar.UseVisualStyleBackColor = true;
-            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
-            // 
-            // btndeshacer
-            // 
-            this.btndeshacer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btndeshacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndeshacer.Image = ((System.Drawing.Image)(resources.GetObject("btndeshacer.Image")));
-            this.btndeshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btndeshacer.Location = new System.Drawing.Point(550, 608);
-            this.btndeshacer.Name = "btndeshacer";
-            this.btndeshacer.Size = new System.Drawing.Size(122, 93);
-            this.btndeshacer.TabIndex = 98;
-            this.btndeshacer.Text = "Deshacer";
-            this.btndeshacer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btndeshacer.UseVisualStyleBackColor = true;
-            this.btndeshacer.Click += new System.EventHandler(this.btndeshacer_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 253);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 25);
-            this.label2.TabIndex = 84;
-            this.label2.Text = "Precio Costo $";
-            // 
-            // txtcosto
-            // 
-            this.txtcosto.Location = new System.Drawing.Point(180, 253);
-            this.txtcosto.Name = "txtcosto";
-            this.txtcosto.Size = new System.Drawing.Size(150, 30);
-            this.txtcosto.TabIndex = 85;
             // 
             // codigo
             // 
@@ -425,22 +389,36 @@
             this.costo.Name = "costo";
             this.costo.ReadOnly = true;
             // 
-            // label3
+            // btnactualizar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 305);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 25);
-            this.label3.TabIndex = 99;
-            this.label3.Text = "Estatus:";
+            this.btnactualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnactualizar.Enabled = false;
+            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Image")));
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnactualizar.Location = new System.Drawing.Point(698, 580);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(122, 93);
+            this.btnactualizar.TabIndex = 97;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
-            // cboxestatus
+            // btndeshacer
             // 
-            this.cboxestatus.FormattingEnabled = true;
-            this.cboxestatus.Location = new System.Drawing.Point(180, 297);
-            this.cboxestatus.Name = "cboxestatus";
-            this.cboxestatus.Size = new System.Drawing.Size(150, 33);
-            this.cboxestatus.TabIndex = 100;
+            this.btndeshacer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btndeshacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeshacer.Image = ((System.Drawing.Image)(resources.GetObject("btndeshacer.Image")));
+            this.btndeshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btndeshacer.Location = new System.Drawing.Point(549, 580);
+            this.btndeshacer.Name = "btndeshacer";
+            this.btndeshacer.Size = new System.Drawing.Size(122, 93);
+            this.btndeshacer.TabIndex = 98;
+            this.btndeshacer.Text = "Deshacer";
+            this.btndeshacer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btndeshacer.UseVisualStyleBackColor = true;
+            this.btndeshacer.Click += new System.EventHandler(this.btndeshacer_Click);
             // 
             // Frmproductos
             // 
@@ -478,7 +456,6 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.TextBox txtprecioventa;
-        private System.Windows.Forms.TextBox txtexistencia;
         private System.Windows.Forms.Label lblprecioventa;
         private System.Windows.Forms.Label lblexistencia;
         private System.Windows.Forms.Button btnguaradar;
@@ -502,7 +479,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn existencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn costo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboxestatus;
+        private System.Windows.Forms.TextBox txtexistencia;
     }
 }

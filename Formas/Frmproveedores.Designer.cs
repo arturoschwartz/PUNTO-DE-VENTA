@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmproveedores));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblconsulta = new System.Windows.Forms.Label();
             this.cboxconsulta = new System.Windows.Forms.ComboBox();
             this.btnsalir = new System.Windows.Forms.Button();
@@ -57,8 +59,19 @@
             this.txtdomicilio = new System.Windows.Forms.TextBox();
             this.txtlocalidad = new System.Windows.Forms.TextBox();
             this.btnbaja = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvproveedores = new System.Windows.Forms.DataGridView();
+            this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // lblconsulta
@@ -117,6 +130,7 @@
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnguardar
             // 
@@ -140,10 +154,10 @@
             this.txtemail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtemail.Enabled = false;
             this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(795, 445);
+            this.txtemail.Location = new System.Drawing.Point(165, 317);
             this.txtemail.Margin = new System.Windows.Forms.Padding(4);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(281, 30);
+            this.txtemail.Size = new System.Drawing.Size(267, 30);
             this.txtemail.TabIndex = 32;
             // 
             // txttelefono
@@ -151,7 +165,7 @@
             this.txttelefono.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txttelefono.Enabled = false;
             this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttelefono.Location = new System.Drawing.Point(795, 386);
+            this.txttelefono.Location = new System.Drawing.Point(165, 258);
             this.txttelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(171, 30);
@@ -162,7 +176,7 @@
             this.lblemail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(696, 450);
+            this.lblemail.Location = new System.Drawing.Point(66, 322);
             this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(77, 25);
@@ -174,7 +188,7 @@
             this.lbltelefono.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbltelefono.AutoSize = true;
             this.lbltelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltelefono.Location = new System.Drawing.Point(681, 389);
+            this.lbltelefono.Location = new System.Drawing.Point(51, 261);
             this.lbltelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltelefono.Name = "lbltelefono";
             this.lbltelefono.Size = new System.Drawing.Size(95, 25);
@@ -186,7 +200,7 @@
             this.lbllocalidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbllocalidad.AutoSize = true;
             this.lbllocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllocalidad.Location = new System.Drawing.Point(671, 338);
+            this.lbllocalidad.Location = new System.Drawing.Point(41, 210);
             this.lbllocalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbllocalidad.Name = "lbllocalidad";
             this.lbllocalidad.Size = new System.Drawing.Size(102, 25);
@@ -198,7 +212,7 @@
             this.lbldomicilio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbldomicilio.AutoSize = true;
             this.lbldomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldomicilio.Location = new System.Drawing.Point(680, 279);
+            this.lbldomicilio.Location = new System.Drawing.Point(50, 151);
             this.lbldomicilio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldomicilio.Name = "lbldomicilio";
             this.lbldomicilio.Size = new System.Drawing.Size(96, 25);
@@ -210,7 +224,7 @@
             this.lblnombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblnombre.AutoSize = true;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.Location = new System.Drawing.Point(686, 221);
+            this.lblnombre.Location = new System.Drawing.Point(56, 93);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(87, 25);
@@ -304,10 +318,10 @@
             this.txtproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtproducto.Enabled = false;
             this.txtproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtproducto.Location = new System.Drawing.Point(795, 505);
+            this.txtproducto.Location = new System.Drawing.Point(165, 377);
             this.txtproducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtproducto.Name = "txtproducto";
-            this.txtproducto.Size = new System.Drawing.Size(192, 30);
+            this.txtproducto.Size = new System.Drawing.Size(184, 30);
             this.txtproducto.TabIndex = 44;
             // 
             // lbltipoproducto
@@ -315,7 +329,7 @@
             this.lbltipoproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbltipoproducto.AutoSize = true;
             this.lbltipoproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltipoproducto.Location = new System.Drawing.Point(633, 510);
+            this.lbltipoproducto.Location = new System.Drawing.Point(3, 382);
             this.lbltipoproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltipoproducto.Name = "lbltipoproducto";
             this.lbltipoproducto.Size = new System.Drawing.Size(140, 25);
@@ -343,7 +357,7 @@
             this.lblcodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblcodigo.AutoSize = true;
             this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.Location = new System.Drawing.Point(704, 166);
+            this.lblcodigo.Location = new System.Drawing.Point(74, 38);
             this.lblcodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.Size = new System.Drawing.Size(69, 25);
@@ -354,7 +368,7 @@
             // 
             this.txtcodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcodigo.Location = new System.Drawing.Point(795, 163);
+            this.txtcodigo.Location = new System.Drawing.Point(165, 35);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(100, 30);
             this.txtcodigo.TabIndex = 47;
@@ -365,9 +379,9 @@
             this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtnombre.Enabled = false;
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombre.Location = new System.Drawing.Point(795, 216);
+            this.txtnombre.Location = new System.Drawing.Point(165, 88);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(320, 30);
+            this.txtnombre.Size = new System.Drawing.Size(273, 30);
             this.txtnombre.TabIndex = 48;
             // 
             // txtdomicilio
@@ -375,9 +389,9 @@
             this.txtdomicilio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtdomicilio.Enabled = false;
             this.txtdomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdomicilio.Location = new System.Drawing.Point(795, 274);
+            this.txtdomicilio.Location = new System.Drawing.Point(165, 146);
             this.txtdomicilio.Name = "txtdomicilio";
-            this.txtdomicilio.Size = new System.Drawing.Size(320, 30);
+            this.txtdomicilio.Size = new System.Drawing.Size(273, 30);
             this.txtdomicilio.TabIndex = 49;
             // 
             // txtlocalidad
@@ -385,9 +399,9 @@
             this.txtlocalidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtlocalidad.Enabled = false;
             this.txtlocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlocalidad.Location = new System.Drawing.Point(795, 333);
+            this.txtlocalidad.Location = new System.Drawing.Point(165, 205);
             this.txtlocalidad.Name = "txtlocalidad";
-            this.txtlocalidad.Size = new System.Drawing.Size(320, 30);
+            this.txtlocalidad.Size = new System.Drawing.Size(273, 30);
             this.txtlocalidad.TabIndex = 50;
             // 
             // btnbaja
@@ -402,24 +416,130 @@
             this.btnbaja.Name = "btnbaja";
             this.btnbaja.Size = new System.Drawing.Size(131, 93);
             this.btnbaja.TabIndex = 51;
-            this.btnbaja.Text = "Guardar";
+            this.btnbaja.Text = "Baja";
             this.btnbaja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbaja.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.txtcodigo);
+            this.groupBox1.Controls.Add(this.lblnombre);
+            this.groupBox1.Controls.Add(this.txttelefono);
+            this.groupBox1.Controls.Add(this.txtemail);
+            this.groupBox1.Controls.Add(this.lbllocalidad);
+            this.groupBox1.Controls.Add(this.lbldomicilio);
+            this.groupBox1.Controls.Add(this.lblcodigo);
+            this.groupBox1.Controls.Add(this.txtnombre);
+            this.groupBox1.Controls.Add(this.txtlocalidad);
+            this.groupBox1.Controls.Add(this.lblemail);
+            this.groupBox1.Controls.Add(this.lbltipoproducto);
+            this.groupBox1.Controls.Add(this.txtdomicilio);
+            this.groupBox1.Controls.Add(this.txtproducto);
+            this.groupBox1.Controls.Add(this.lbltelefono);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(146, 177);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(459, 443);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Consulta";
+            // 
+            // dgvproveedores
+            // 
+            this.dgvproveedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvproveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvproveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvproveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clave,
+            this.nombre,
+            this.domicilio,
+            this.localidad,
+            this.telefono,
+            this.email,
+            this.producto});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvproveedores.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvproveedores.Location = new System.Drawing.Point(621, 177);
+            this.dgvproveedores.Name = "dgvproveedores";
+            this.dgvproveedores.RowHeadersWidth = 51;
+            this.dgvproveedores.RowTemplate.Height = 24;
+            this.dgvproveedores.Size = new System.Drawing.Size(825, 443);
+            this.dgvproveedores.TabIndex = 54;
+            // 
+            // clave
+            // 
+            this.clave.HeaderText = "Clave";
+            this.clave.MinimumWidth = 6;
+            this.clave.Name = "clave";
+            this.clave.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // domicilio
+            // 
+            this.domicilio.HeaderText = "Domicilio";
+            this.domicilio.MinimumWidth = 6;
+            this.domicilio.Name = "domicilio";
+            this.domicilio.ReadOnly = true;
+            // 
+            // localidad
+            // 
+            this.localidad.HeaderText = "Localidad";
+            this.localidad.MinimumWidth = 6;
+            this.localidad.Name = "localidad";
+            this.localidad.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.MinimumWidth = 6;
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // producto
+            // 
+            this.producto.HeaderText = "Tipo Producto";
+            this.producto.MinimumWidth = 6;
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
             // 
             // Frmproveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1458, 785);
+            this.Controls.Add(this.dgvproveedores);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnbaja);
-            this.Controls.Add(this.txtlocalidad);
-            this.Controls.Add(this.txtdomicilio);
-            this.Controls.Add(this.txtnombre);
-            this.Controls.Add(this.txtcodigo);
-            this.Controls.Add(this.lblcodigo);
             this.Controls.Add(this.btnactualizar);
-            this.Controls.Add(this.txtproducto);
-            this.Controls.Add(this.lbltipoproducto);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -428,13 +548,6 @@
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnguardar);
-            this.Controls.Add(this.txtemail);
-            this.Controls.Add(this.txttelefono);
-            this.Controls.Add(this.lblemail);
-            this.Controls.Add(this.lbltelefono);
-            this.Controls.Add(this.lbllocalidad);
-            this.Controls.Add(this.lbldomicilio);
-            this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.txtclave);
             this.Controls.Add(this.lblclave);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -445,6 +558,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +596,14 @@
         private System.Windows.Forms.TextBox txtdomicilio;
         private System.Windows.Forms.TextBox txtlocalidad;
         private System.Windows.Forms.Button btnbaja;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvproveedores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn localidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
     }
 }

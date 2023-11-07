@@ -20,11 +20,12 @@ namespace punto_de_venta.Formas
         Clases.conexion objconexion;
         SqlConnection conexion;
         int existe;
-        string estatus;
-        int tipo;
+        
+        
         public Frmproductos()
         {
             InitializeComponent();
+            
         }
 
         private void btnmenuproductos_Click(object sender, EventArgs e)
@@ -46,9 +47,12 @@ namespace punto_de_venta.Formas
             Application.Exit();
         }
 
+        
+        
+
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char) Keys.Enter)
+            if (e.KeyChar == 13)
             {
                 if (string.IsNullOrEmpty(txtcodigo.Text))
                 {
@@ -58,16 +62,15 @@ namespace punto_de_venta.Formas
                 objconexion = new Clases.conexion();
                 conexion = new SqlConnection(objconexion.conn());
                 conexion.Open();
-                //string query = "select * from Productos where pto_clave=@pto_clave";
-                SqlCommand comando = new SqlCommand("select pto_clave, pto_nombre, pto_precio, pto_existencia, pto_costo from Productos where pto_clave=" + txtcodigo.Text, conexion);
+                SqlCommand comando = new SqlCommand("select pto_clave, pto_nombre, pto_precio, pto_stock, pto_costo from Productos where pto_clave=" + txtcodigo.Text, conexion);
                 comando.Parameters.Clear();
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@pto_clave", txtcodigo.Text);
+                comando.Parameters.AddWithValue("@pto_clave", (txtcodigo.Text));
                 comando.Parameters.AddWithValue("@pto_nombre", txtnombre.Text);
                 comando.Parameters.AddWithValue("@pto_precio", txtprecioventa.Text);
-                comando.Parameters.AddWithValue("@pto_existencia", txtexistencia.Text);
-                comando.Parameters.AddWithValue("@pto_costo", txtcosto.Text);
-                
+                comando.Parameters.AddWithValue("@pto_stock", txtexistencia.Text);
+
+                //comando.Parameters.AddWithValue("@pto_estatus", cboxestatus.SelectedIndex);
+
                 SqlDataReader leer = comando.ExecuteReader();
                 if (leer.Read())
                 {
@@ -75,8 +78,15 @@ namespace punto_de_venta.Formas
                     txtcodigo.Text = leer["pto_clave"].ToString();
                     txtnombre.Text = leer["pto_nombre"].ToString();
                     txtprecioventa.Text = leer["pto_precio"].ToString();
-                    txtexistencia.Text = leer["pto_existencia"].ToString();
+                    txtexistencia.Text = leer["pto_stock"].ToString();
                     txtcosto.Text = leer["pto_costo"].ToString();
+                    //estatus =  leer["pto_estatus"].ToString();
+                   
+
+
+
+
+
                     dgvproductos.Rows.Add(txtcodigo.Text, txtnombre.Text, txtexistencia.Text, txtprecioventa.Text, txtcosto.Text);
                     btneliminar.Enabled = true;
                     btnactualizar.Enabled = true;
@@ -86,6 +96,8 @@ namespace punto_de_venta.Formas
                     btnguaradar.Enabled = true;
                     txtprecioventa.Enabled = true;
                     txtexistencia.Enabled = true;
+                    txtcosto.Enabled = true;
+
                     txtcodigo.Focus();
                     txtcodigo.SelectAll();
 
@@ -93,7 +105,7 @@ namespace punto_de_venta.Formas
                 }
                 else
                 {
-                    if(MessageBox.Show("Producto no registrado, deseas agregar?", "Atencion!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
+                    if (MessageBox.Show("Producto no registrado, deseas agregar?", "Atencion!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop) == DialogResult.Yes)
                     {
                         existe = 0;
                         txtcodigo.Enabled = false;
@@ -102,15 +114,23 @@ namespace punto_de_venta.Formas
                         btnguaradar.Enabled = true;
                         txtcodigo.Enabled = false;
                         txtnombre.Enabled = true;
-                        txtcodigo.Focus();
+                        txtexistencia.Enabled = true;
+                        txtcosto.Enabled = true;
+
+                        txtexistencia.Clear();
+                        txtcosto.Clear();
+                        txtnombre.Focus();
                         txtnombre.Clear();
                         txtprecioventa.Clear();
-                        
+                        txtcodigo.SelectAll();
+
                     }
+
                 }
                 conexion.Close();
             }
         }
+
 
         private void btnactualizar_Click(object sender, EventArgs e)
         {
@@ -119,18 +139,22 @@ namespace punto_de_venta.Formas
                 objconexion = new Clases.conexion();
                 conexion = new SqlConnection(objconexion.conn());
                 conexion.Open();
-                string query = "update Productos set pto_nombre=@pto_nombre, pto_precio=@pto_precio where pto_clave=@pto_clave";
+                string query = "update Productos set pto_nombre=@pto_nombre, pto_precio=@pto_precio, pto_stock=@pto_stock, pto_costo=@pto_costo where pto_clave=@pto_clave";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@pto_clave", this.txtcodigo.Text);
                 comando.Parameters.AddWithValue("@pto_nombre", this.txtnombre.Text);
                 comando.Parameters.AddWithValue("@pto_precio", this.txtprecioventa.Text);
+                comando.Parameters.AddWithValue("@pto_stock", this.txtexistencia.Text);
+                comando.Parameters.AddWithValue("@pto_costo", this.txtcosto.Text);
                 comando.ExecuteNonQuery();
-                dgvproductos.Rows.Add(txtcodigo.Text, txtnombre.Text, txtprecioventa.Text);
+                dgvproductos.Rows.Add(txtcodigo.Text, txtnombre.Text, txtprecioventa.Text, txtcosto.Text, txtprecioventa.Text);
                 MessageBox.Show("ACTUALIZACION EXITOSA", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtcodigo.Focus();
             }
         }
+
+
 
         private void btnguaradar_Click(object sender, EventArgs e)
         {
@@ -139,23 +163,30 @@ namespace punto_de_venta.Formas
                 objconexion = new Clases.conexion();
                 conexion = new SqlConnection(objconexion.conn());
                 conexion.Open();
-                string query = "insert into Productos values (@pto_clave, @pto_nombre, @pto_precio)";
+                string query = "insert into Productos values (@pto_clave, @pto_nombre, @pto_precio, @pto_stock, @pto_costo)";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@pto_clave", this.txtcodigo.Text);
-                comando.Parameters.AddWithValue("@pto_nombre", this.txtnombre.Text);
-                comando.Parameters.AddWithValue("@pto_precio", this.txtprecioventa.Text);
+                comando.Parameters.AddWithValue("@pto_clave", txtcodigo.Text);
+                comando.Parameters.AddWithValue("@pto_nombre", txtnombre.Text);
+                comando.Parameters.AddWithValue("@pto_precio", txtprecioventa.Text);
+                comando.Parameters.AddWithValue("@pto_stock", txtexistencia.Text);
+                comando.Parameters.AddWithValue("@pto_costo", txtcosto.Text);
                 comando.ExecuteNonQuery();
+                dgvproductos.Rows.Add(txtcodigo.Text, txtnombre.Text, txtprecioventa.Text, txtcosto.Text, txtprecioventa.Text);
                 MessageBox.Show("REGISTRO EXITOSO", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+                txtcosto.Clear();
+                txtexistencia.Clear();
                 txtcodigo.Clear();
                 txtnombre.Clear();
                 txtprecioventa.Clear();
                 txtcodigo.Enabled = true;
                 txtnombre.Enabled = true; ;
                 txtprecioventa.Enabled = false;
+                txtcosto.Enabled = false;
+                txtexistencia.Enabled = false;
                 txtcodigo.Focus();
+
 
 
             }
@@ -183,7 +214,12 @@ namespace punto_de_venta.Formas
                     txtcodigo.Clear();
                     txtnombre.Clear();
                     txtprecioventa.Clear();
+                    txtcosto.Clear();
+                    txtexistencia.Clear();
                     txtprecioventa.Enabled = false;
+                    txtcosto.Enabled = false;
+                    txtexistencia.Enabled = false;
+                    
 
                 }
                 conexion.Close();
@@ -238,6 +274,7 @@ namespace punto_de_venta.Formas
                     btnguaradar.Enabled = true;
                     txtcodigo.Enabled = false;
                     txtnombre.Enabled = true;
+                    txtcosto.Enabled = true;
                     txtnombre.Clear();
                     txtprecioventa.Clear();
                     txtnombre.Focus();
@@ -247,6 +284,7 @@ namespace punto_de_venta.Formas
             }
             conexion.Close();
         }
+       
 
         private void btndeshacer_Click(object sender, EventArgs e)
         {
@@ -257,6 +295,11 @@ namespace punto_de_venta.Formas
             txtcodigo.Enabled = true;
             txtcodigo.Focus();
             btnguaradar.Enabled = false;
+            txtprecioventa.Enabled = false;
+            txtexistencia.Enabled = false;
+            txtcosto.Enabled=false;
+            
+            txtcosto.Clear();
             this.dgvproductos.Rows.Clear();
         }
 

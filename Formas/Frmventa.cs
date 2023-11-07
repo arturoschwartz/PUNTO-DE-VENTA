@@ -22,10 +22,12 @@ namespace punto_de_venta.Formas
         SqlConnection conexion;
         int existe;
         
+        
         public Frmventa()
         {
             InitializeComponent();
             suma();
+            elimar_seldas();
             
             
             
@@ -172,6 +174,7 @@ namespace punto_de_venta.Formas
                 
             }
             txttotal.Text = total.ToString("N2");
+            
         }
 
         private void producto_total()
@@ -209,6 +212,7 @@ namespace punto_de_venta.Formas
                 try
                 {
                     txtcambio.Text = (float.Parse(txtpago.Text) - float.Parse(txttotal.Text)).ToString();
+                    
                       
                 }
                 catch (Exception)
@@ -234,13 +238,17 @@ namespace punto_de_venta.Formas
                 dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
                 suma();
                 txtcantidad.Clear();
-                txtcodigo.Clear();
+                /*txtcodigo.Clear();
                 txtimporte.Clear();
                 txtnombre2.Clear();
-                txtpreciounit.Clear();
+                txtpreciounit.Clear();*/
                 txtcodigo.Focus();
                 
             }
+            else
+            {
+                
+            }    
         }
 
         private void txtnombre2_KeyPress(object sender, KeyPressEventArgs e)
@@ -282,6 +290,46 @@ namespace punto_de_venta.Formas
                 conexion.Close();
             }
             
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            objconexion = new Clases.conexion();
+            conexion = new SqlConnection(objconexion.conn());
+            conexion.Open();
+            String query = "insert into Detalleventa values (@id_producto, @precio_venta, @cantidad, @importe)";
+            SqlCommand comando = new SqlCommand(query, conexion);
+
+            foreach (DataGridViewRow row in dgvventas.Rows)
+            {
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@id_producto", Convert.ToString(row.Cells["codigo"].Value));
+                comando.Parameters.AddWithValue("@precio_venta", Convert.ToString(row.Cells["precio"].Value));
+                comando.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["cantidad"].Value));
+                comando.Parameters.AddWithValue("@importe", Convert.ToString(row.Cells["importe"].Value));
+                comando.ExecuteNonQuery();
+                MessageBox.Show("REGISTRO EXITOSO", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            MessageBox.Show("datos agregados");
+
+            try
+            {
+                
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al agregar");
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+        private void elimar_seldas()
+        {
+            dgvventas.AllowUserToAddRows = false;
         }
     }
 }

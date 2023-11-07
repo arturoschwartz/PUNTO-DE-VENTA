@@ -97,7 +97,7 @@
             this.utileriaToolStripMenuItem,
             this.acercaDeToolStripMenuItem,
             this.btnsalir});
-            this.menuStrip1.Location = new System.Drawing.Point(205, 32);
+            this.menuStrip1.Location = new System.Drawing.Point(262, 32);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(712, 39);
             this.menuStrip1.TabIndex = 1;
@@ -324,12 +324,13 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1394, 74);
+            this.panel1.Size = new System.Drawing.Size(1451, 74);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -337,7 +338,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(491, 9);
+            this.label1.Location = new System.Drawing.Point(519, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(497, 54);
             this.label1.TabIndex = 0;
@@ -350,9 +351,9 @@
             this.panel2.Controls.Add(this.btninventario);
             this.panel2.Controls.Add(this.btnventa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 74);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(151, 691);
+            this.panel2.Size = new System.Drawing.Size(151, 765);
             this.panel2.TabIndex = 6;
             // 
             // button1
@@ -373,12 +374,13 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.menuStrip1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(151, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1243, 100);
+            this.panel3.Size = new System.Drawing.Size(1300, 100);
             this.panel3.TabIndex = 7;
             // 
             // Frmmenu
@@ -386,7 +388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1394, 775);
+            this.ClientSize = new System.Drawing.Size(1453, 775);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -433,7 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnrespaldo2;
         private System.Windows.Forms.ToolStripMenuItem btnconfiguracin;
         private System.Windows.Forms.ToolStripMenuItem btnautor;
-        private System.Windows.Forms.Button btnventa;
         private System.Windows.Forms.Button btninventario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -442,5 +443,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnempleados;
         private System.Windows.Forms.ToolStripMenuItem btnproductos;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnventa;
     }
 }

@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 using System.Net.Http.Headers;
 using System.Security;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics.Eventing.Reader;
+using CrystalDecisions.ReportAppServer.DataDefModel;
 
 namespace punto_de_venta.Formas
 {
@@ -22,11 +24,12 @@ namespace punto_de_venta.Formas
         string password;
         string usuario;
         string nivel;
-        int intentos = 0;
+        int intento = 0;
 
         public Frmlogin()
         {
             InitializeComponent();
+            
         }
 
 
@@ -37,15 +40,13 @@ namespace punto_de_venta.Formas
                 objconexion = new Clases.conexion();
                 conexion = new SqlConnection(objconexion.conn());
                 conexion.Open();
-                string query= "select * from Usuarios where us_Usuarios=@us_Usuarios";
+                string query = "select * from Usuarios where us_Usuarios=@us_Usuarios";
                 SqlCommand comando = new SqlCommand(query, conexion);
-
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@us_Usuarios", txtusuario.Text);
                 SqlDataReader leer = comando.ExecuteReader();
                 if (leer.Read())
                 {
-                    //existe = 1;
                     //password = leer["us_Password"].ToString();
                     nivel = leer["us_nivel"].ToString();
                     if (nivel == "1")
@@ -54,67 +55,93 @@ namespace punto_de_venta.Formas
                         txtnivel.Text = "Empleado";
                     txtpassword.Enabled = true;
                     txtpassword.Focus();
-                    btnacceder.Enabled = true;
-                }
-                conexion.Close();
-            }
-
-        
-        }
-
-        private void txtpassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e. KeyChar == 13)
-            {
-                conexion.Open();
-                string query = "select * from Usuarios where us_Password=@us_Password";
-                SqlCommand comando = new SqlCommand(query, conexion);
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@us_Password", txtpassword.Text);
-                SqlDataReader leer = comando.ExecuteReader();
-                if (leer.Read())
-                {
-                    password = leer["us_Password"].ToString();
-
-                    DialogResult res = MessageBox.Show("Bienvenido al sistema: " + txtusuario.Text, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (res == DialogResult.OK)
-                    {
-                        
-                        Formas.Frmmenu x = new Formas.Frmmenu();
-                        x.Show();
-                        this.Hide();
-                    }
                 }
                 else
                 {
+                    MessageBox.Show("Error, usuario no registrado", "ERRROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtusuario.Clear();
+                    txtusuario.Focus();
                     
-                    MessageBox.Show("Error, password incorrecta", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtpassword.Clear();
-                    txtpassword.Focus();
+
                 }
+                conexion.Close();
             }
-            conexion.Close();
         }
 
         private void btnacceder_Click(object sender, EventArgs e)
         {
+            objconexion = new Clases.conexion();
+            conexion = new SqlConnection(objconexion.conn());
             conexion.Open();
-            string consulta = "select * from Usuarios where us_Password=@us_Password";
+            string consulta = "select * from Usuarios where us_Usuarios='" + txtusuario.Text + "' and us_Password='" + txtpassword.Text + "'";
             SqlCommand comando = new SqlCommand(consulta, conexion);
-            comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@us_Password", txtpassword.Text);
-            SqlDataReader leer = comando.ExecuteReader();
-            if (leer.Read())
+            SqlDataReader lector;
+            lector = comando.ExecuteReader();
+            if (lector.HasRows == true)
+            {
+                Formas.Frmmenu x = new Formas.Frmmenu();
+                x.Show();
+                this.Hide();
+            }
+            else
             {
 
-                
+                MessageBox.Show("Error: Password Incorrecto", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtpassword.Clear();
+                intento++;
+                if (intento == 3)
+                {
+                    MessageBox.Show("Oportunidades agotadas!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //el sistema se cierra
+                    Application.Exit();
+                }
             }
+
             conexion.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtpassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                objconexion = new Clases.conexion();
+                conexion = new SqlConnection(objconexion.conn());
+                conexion.Open();
+                string consulta = "select * from Usuarios where us_Usuarios='" + txtusuario.Text + "' and us_Password='" + txtpassword.Text + "'";
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                SqlDataReader lector;
+                lector = comando.ExecuteReader();
+                if (lector.HasRows == true)
+                {
+                    Formas.Frmmenu x = new Formas.Frmmenu();
+                    x.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Error: Password Incorrecto", "ERROR!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtpassword.Clear();
+                    intento++;
+                    if (intento == 3)
+                    {
+                        MessageBox.Show("Oportunidades agotadas!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //el sistema se cierra
+                        Application.Exit();
+                    }
+                }
+
+                conexion.Close();
+            }
+        }
+
+        private void login()
+        {
+
         }
     }
 }

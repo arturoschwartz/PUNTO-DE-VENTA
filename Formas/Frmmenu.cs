@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Permissions;
+using log4net.Core;
 
 namespace punto_de_venta.Formas
 {
@@ -16,7 +17,7 @@ namespace punto_de_venta.Formas
         public Frmmenu()
         {
             InitializeComponent();
-            
+            llenar();
         }
 
         private void btnventa_Click(object sender, EventArgs e)
@@ -48,6 +49,12 @@ namespace punto_de_venta.Formas
         private void btninventarioo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void llenar()
+        {
+            
+            
         }
 
         private void btnclientes_Click(object sender, EventArgs e)
