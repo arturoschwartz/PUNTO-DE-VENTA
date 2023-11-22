@@ -15,26 +15,48 @@ namespace punto_de_venta.Formas
     public partial class Frmclientes : Form
     {
         int existe;
-        int estatus;
+        //int estatus;
         Clases.conexion objconexion;
         SqlConnection conexion;
         public Frmclientes()
         {
             InitializeComponent();
+            menu();
         }
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
             Formas.Frmmenu x = new Formas.Frmmenu();
+            AddOwnedForm(x);
+            x.txtnivel11.Text = this.txtnivel8.Text;
+            if (x.txtnivel11.Text == "Administrador")
+            {
+                x.btnauditoria.Enabled = true;
+                x.btninventarioo.Enabled = true;
+                x.btnempleados.Enabled = true;
+                x.btngrupos.Enabled = true;
+                x.btnproveedores.Enabled = true;
+                x.btnventas.Enabled = true;
+                x.btncompras2.Enabled = true;
+                x.btnrespaldo2.Enabled = true;
+                x.btnconfiguracin.Enabled = true;
+                x.btnproductos.Enabled = true;
+                x.btnclientes.Enabled = true;
+
+            }
             x.Show();
-            this.Hide();
+        }
+        private void menu()
+        {
+            
         }
 
         private void btnventa_Click(object sender, EventArgs e)
         {
             Formas.Frmventa x = new Formas.Frmventa();
+            AddOwnedForm(x);
+            x.txtnivel15.Text = this.txtnivel8.Text;
             x.Show();
-            this.Hide();
         }
 
         private void txtclave_KeyPress(object sender, KeyPressEventArgs e)

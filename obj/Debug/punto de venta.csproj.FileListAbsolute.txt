@@ -150,3 +150,5 @@ C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.application
 C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.csproj.CopyComplete
 C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.exe
 C:\PUNTO-DE-VENTA\obj\Debug\punto de venta.pdb
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frmconfiguracion.resources
+C:\PUNTO-DE-VENTA\obj\Debug\punto_de_venta.Formas.Frminventario.resources

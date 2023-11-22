@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -122,7 +122,9 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -139,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\conexion.cs" />
-    <Compile Include="Clases\globales.cs" />
     <Compile Include="Formas\Frmacercade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,11 +165,23 @@
     <Compile Include="Formas\Frmcompras.Designer.cs">
       <DependentUpon>Frmcompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Frmconfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frmconfiguracion.Designer.cs">
+      <DependentUpon>Frmconfiguracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Frmempleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formas\Frmempleados.Designer.cs">
       <DependentUpon>Frmempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Frminventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Frminventario.Designer.cs">
+      <DependentUpon>Frminventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Frmlogin.cs">
       <SubType>Form</SubType>
@@ -226,8 +239,14 @@
     <EmbeddedResource Include="Formas\Frmcompras.resx">
       <DependentUpon>Frmcompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frmconfiguracion.resx">
+      <DependentUpon>Frmconfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\Frmempleados.resx">
       <DependentUpon>Frmempleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Frminventario.resx">
+      <DependentUpon>Frminventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Frmlogin.resx">
       <DependentUpon>Frmlogin.cs</DependentUpon>

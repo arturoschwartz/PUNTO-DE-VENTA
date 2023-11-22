@@ -20,13 +20,35 @@ namespace punto_de_venta.Formas
         public Frmproveedores()
         {
             InitializeComponent();
+            menu();
         }
 
         private void btnmenuproveedores_Click(object sender, EventArgs e)
         {
             Formas.Frmmenu x = new Formas.Frmmenu();
+            AddOwnedForm(x);
+            x.txtnivel11.Text = this.txtnivel13.Text;
+            if (x.txtnivel11.Text == "Administrador")
+            {
+                x.btnauditoria.Enabled = true;
+                x.btninventarioo.Enabled = true;
+                x.btnempleados.Enabled = true;
+                x.btngrupos.Enabled = true;
+                x.btnproveedores.Enabled = true;
+                x.btnventas.Enabled = true;
+                x.btncompras2.Enabled = true;
+                x.btnrespaldo2.Enabled = true;
+                x.btnconfiguracin.Enabled = true;
+                x.btnproductos.Enabled = true;
+                x.btnclientes.Enabled = true;
+
+            }
             x.Show();
-            this.Hide();
+        }
+
+        private void menu()
+        {
+            
         }
 
         private void btnsalir_Click(object sender, EventArgs e)

@@ -67,9 +67,17 @@
             this.btnmenuventa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvventas = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtnivel15 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnproductos = new System.Windows.Forms.Button();
+            this.btnproductos2 = new System.Windows.Forms.Button();
             this.txtnombre2 = new System.Windows.Forms.TextBox();
             this.btnquitar = new System.Windows.Forms.Button();
             this.cboxcliente = new System.Windows.Forms.ComboBox();
@@ -80,14 +88,10 @@
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.txtimporte = new System.Windows.Forms.TextBox();
             this.txtproducto = new System.Windows.Forms.TextBox();
-            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpboxtipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -261,6 +265,7 @@
             this.btncerrar.Text = "Cerrar";
             this.btncerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncerrar.UseVisualStyleBackColor = true;
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
             // btndeshacer
             // 
@@ -539,9 +544,46 @@
             this.dgvventas.Size = new System.Drawing.Size(1025, 206);
             this.dgvventas.TabIndex = 84;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.MinimumWidth = 12;
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.FillWeight = 120F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio Unit";
+            this.precio.MinimumWidth = 6;
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // importe
+            // 
+            this.importe.HeaderText = "Importe";
+            this.importe.MinimumWidth = 6;
+            this.importe.Name = "importe";
+            this.importe.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -549,10 +591,39 @@
             this.panel1.Size = new System.Drawing.Size(1417, 100);
             this.panel1.TabIndex = 85;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.Controls.Add(this.txtnivel15);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(343, 100);
+            this.panel3.TabIndex = 1;
+            // 
+            // txtnivel15
+            // 
+            this.txtnivel15.Enabled = false;
+            this.txtnivel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnivel15.Location = new System.Drawing.Point(183, 35);
+            this.txtnivel15.Name = "txtnivel15";
+            this.txtnivel15.Size = new System.Drawing.Size(142, 30);
+            this.txtnivel15.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nivel de Usuario:";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Controls.Add(this.btnproductos);
+            this.panel2.Controls.Add(this.btnproductos2);
             this.panel2.Controls.Add(this.btnmenuventa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
@@ -560,19 +631,20 @@
             this.panel2.Size = new System.Drawing.Size(144, 769);
             this.panel2.TabIndex = 86;
             // 
-            // btnproductos
+            // btnproductos2
             // 
-            this.btnproductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
-            this.btnproductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnproductos.Location = new System.Drawing.Point(12, 436);
-            this.btnproductos.Name = "btnproductos";
-            this.btnproductos.Size = new System.Drawing.Size(121, 97);
-            this.btnproductos.TabIndex = 78;
-            this.btnproductos.Text = "Productos";
-            this.btnproductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnproductos.UseVisualStyleBackColor = true;
-            this.btnproductos.Click += new System.EventHandler(this.btnproductos_Click);
+            this.btnproductos2.Enabled = false;
+            this.btnproductos2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnproductos2.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos2.Image")));
+            this.btnproductos2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnproductos2.Location = new System.Drawing.Point(12, 436);
+            this.btnproductos2.Name = "btnproductos2";
+            this.btnproductos2.Size = new System.Drawing.Size(121, 97);
+            this.btnproductos2.TabIndex = 78;
+            this.btnproductos2.Text = "Productos";
+            this.btnproductos2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnproductos2.UseVisualStyleBackColor = true;
+            this.btnproductos2.Click += new System.EventHandler(this.btnproductos_Click);
             // 
             // txtnombre2
             // 
@@ -631,7 +703,6 @@
             this.btnbuscarproduc.TabIndex = 93;
             this.btnbuscarproduc.Text = "Buscar";
             this.btnbuscarproduc.UseVisualStyleBackColor = true;
-            this.btnbuscarproduc.Click += new System.EventHandler(this.btnbuscarproduc_Click);
             // 
             // label4
             // 
@@ -679,43 +750,6 @@
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(270, 30);
             this.txtproducto.TabIndex = 99;
-            this.txtproducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtproducto_KeyPress);
-            // 
-            // importe
-            // 
-            this.importe.HeaderText = "Importe";
-            this.importe.MinimumWidth = 6;
-            this.importe.Name = "importe";
-            this.importe.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 6;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio Unit";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 120F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.MinimumWidth = 12;
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
             // 
             // Frmventa
             // 
@@ -775,6 +809,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -818,7 +854,6 @@
         private System.Windows.Forms.DataGridView dgvventas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnproductos;
         private System.Windows.Forms.RadioButton rdbtncredito;
         private System.Windows.Forms.TextBox txtnombre2;
         private System.Windows.Forms.Button btnquitar;
@@ -835,5 +870,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtnivel15;
+        public System.Windows.Forms.Button btnproductos2;
     }
 }

@@ -1,8 +1,10 @@
 ﻿using CrystalDecisions.Shared;
+using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -10,6 +12,8 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
@@ -21,6 +25,8 @@ namespace punto_de_venta.Formas
         Clases.conexion objconexion;
         SqlConnection conexion;
         int existe;
+        string nivel;
+        
         
         
         public Frmventa()
@@ -28,22 +34,50 @@ namespace punto_de_venta.Formas
             InitializeComponent();
             suma();
             elimar_seldas();
+            dgvinventario();
             
             
             
         }
+
         private void btnmenuventa_Click(object sender, EventArgs e)
         {
             Formas.Frmmenu x = new Formas.Frmmenu();
+            AddOwnedForm(x);
+            x.txtnivel11.Text = this.txtnivel15.Text;
+            if (x.txtnivel11.Text == "Administrador")
+            {
+                x.btnauditoria.Enabled = true;
+                x.btninventarioo.Enabled = true;
+                x.btnempleados.Enabled = true;
+                x.btngrupos.Enabled = true;
+                x.btnproveedores.Enabled = true;
+                x.btnventas.Enabled = true;
+                x.btncompras2.Enabled = true;
+                x.btnrespaldo2.Enabled = true;
+                x.btnconfiguracin.Enabled = true;
+                x.btnproductos.Enabled = true;
+                x.btnclientes.Enabled = true;
+                
+
+                
+
+            }
             x.Show();
-            this.Hide();
+            
+            
+        }
+        private void cambio()
+        {
+            
         }
 
         private void btnproductos_Click(object sender, EventArgs e)
         {
             Formas.Frmproductos x = new Formas.Frmproductos();
+            AddOwnedForm(x);
+            x.txtnivel12.Text = this.txtnivel15.Text;
             x.Show();
-            this.Hide();
         }
 
         private void rdbtncredito_CheckedChanged(object sender, EventArgs e)
@@ -134,9 +168,12 @@ namespace punto_de_venta.Formas
                     txtcodigo.Text = leer["pto_clave"].ToString();
                     txtnombre2.Text = leer["pto_nombre"].ToString();
                     txtpreciounit.Text = leer["pto_precio"].ToString();
-                    txtcantidad.Text = "1";
-                    txtcantidad.Focus();
-                    txtimporte.Clear();
+                    dgvventas.Rows.Insert(0, txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text = "1", txtimporte.Text = txtpreciounit.Text);
+                    suma();
+                    txtcodigo.Focus();
+                    txtcodigo.SelectAll();
+                    
+                    
                 }
                 else
                 {
@@ -175,11 +212,7 @@ namespace punto_de_venta.Formas
             }
             txttotal.Text = total.ToString("N2");
             
-        }
 
-        private void producto_total()
-        {
-            
         }
 
         private void btnquitar_Click(object sender, EventArgs e)
@@ -222,32 +255,27 @@ namespace punto_de_venta.Formas
             }
         }
 
-        private void btnbuscarproduc_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == 13)
             {
                 //convierto los textos a double y despues el resultado a texto con tostring
                 //el complemento "N2 se determina que reconozca los decimales en el resultado"
+                dgvventas.Rows.RemoveAt(dgvventas.CurrentRow.Index);
                 txtimporte.Text = (Convert.ToDouble(txtpreciounit.Text) * Convert.ToDouble(txtcantidad.Text)).ToString("N2");
-                dgvventas.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
+                dgvventas.Rows.Insert(0, txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
                 suma();
                 txtcantidad.Clear();
-                /*txtcodigo.Clear();
-                txtimporte.Clear();
-                txtnombre2.Clear();
-                txtpreciounit.Clear();*/
+                dgvventas.ClearSelection();
                 txtcodigo.Focus();
-                
+
             }
             else
             {
-                
+
             }    
         }
 
@@ -266,31 +294,8 @@ namespace punto_de_venta.Formas
             }
         }
 
-        private void txtproducto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == 13)
-            {
-                objconexion = new Clases.conexion();
-                conexion = new SqlConnection(objconexion.conn());
-                conexion.Open();
-                SqlCommand comando = new SqlCommand("select  from pto_clave, pto_nombre Productos where pto_nombre=" + txtproducto.Text, conexion);
-                comando.Parameters.Clear();
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@pto_clave", txtcodigo.Text);
-                comando.Parameters.AddWithValue("@pto_nombre", txtnombre2.Text);
-               
-                SqlDataReader leer = comando.ExecuteReader();
-                if (leer.Read())
-                {
-                    existe = 1;
-                    txtcodigo.Text = leer["pto_clave"].ToString();
-                    txtnombre2.Text = leer["pto_nombre"].ToString();
-
-                }
-                conexion.Close();
-            }
-            
-        }
+        
+        
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
@@ -308,28 +313,31 @@ namespace punto_de_venta.Formas
                 comando.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["cantidad"].Value));
                 comando.Parameters.AddWithValue("@importe", Convert.ToString(row.Cells["importe"].Value));
                 comando.ExecuteNonQuery();
-                MessageBox.Show("REGISTRO EXITOSO", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            MessageBox.Show("datos agregados");
-
-            try
-            {
+                dgvinventario();
+                MessageBox.Show("VENTA EXITOSA", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
+            }
+            
 
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error al agregar");
-            }
-            finally
-            {
-                conexion.Close();
-            }
+            
         }
         private void elimar_seldas()
         {
             dgvventas.AllowUserToAddRows = false;
+            
+            
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void dgvinventario()
+        {
+            Formas.Frminventario x = new Formas.Frminventario();
+            AddOwnedForm(x);
+            x.dgvinventario.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
+            
         }
     }
 }
