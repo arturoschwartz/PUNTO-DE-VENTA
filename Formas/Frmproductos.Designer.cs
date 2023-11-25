@@ -378,6 +378,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvproductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvproductos.RowHeadersVisible = false;
             this.dgvproductos.RowHeadersWidth = 51;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Blue;
             this.dgvproductos.RowsDefaultCellStyle = dataGridViewCellStyle4;

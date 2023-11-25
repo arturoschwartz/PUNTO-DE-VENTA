@@ -22,6 +22,7 @@ namespace punto_de_venta.Formas
         {
             InitializeComponent();
             menu();
+            eliminar_celda();
         }
 
         private void btnmenu_Click(object sender, EventArgs e)
@@ -44,7 +45,9 @@ namespace punto_de_venta.Formas
                 x.btnclientes.Enabled = true;
 
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
         private void menu()
         {
@@ -56,7 +59,10 @@ namespace punto_de_venta.Formas
             Formas.Frmventa x = new Formas.Frmventa();
             AddOwnedForm(x);
             x.txtnivel15.Text = this.txtnivel8.Text;
-            x.Show();
+            x.btnproductos2.Enabled = true;
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void txtclave_KeyPress(object sender, KeyPressEventArgs e)
@@ -86,8 +92,9 @@ namespace punto_de_venta.Formas
                     txtlocalidad.Text = leer["cl_localidad"].ToString();
                     txttelefono.Text = leer["cl_telefono"].ToString();
                     txtemail.Text = leer["cl_email"].ToString();
-                    dgvcliente.Rows.Add(txtclave.Text, txtnombre.Text, txtdomicilio.Text, txtlocalidad.Text, txttelefono.Text, txtemail.Text);
-
+                    dgvcliente.Rows.Insert(0, txtclave.Text, txtnombre.Text, txtdomicilio.Text, txtlocalidad.Text, txttelefono.Text, txtemail.Text);
+                    dgvcliente.CurrentCell = dgvcliente.Rows[0].Cells[0];
+                    txtclave.SelectAll();
                     btnactualizar.Enabled = true;
                     btneliminar.Enabled = true;
                     btnbaja.Enabled = true;
@@ -220,6 +227,7 @@ namespace punto_de_venta.Formas
             txttelefono.Enabled = false;
             txtemail.Enabled = false;
             txtclave.Focus();
+            this.dgvcliente.Rows.Clear();
         }
 
         private void btnactualizar_Click(object sender, EventArgs e)
@@ -243,6 +251,15 @@ namespace punto_de_venta.Formas
                 MessageBox.Show("ACTUALIZACION EXITOSA", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
+        }
+        private void eliminar_celda()
+        {
+            dgvcliente.AllowUserToAddRows = false;
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
     

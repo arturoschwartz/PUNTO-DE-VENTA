@@ -49,7 +49,9 @@ namespace punto_de_venta.Formas
                 x.btnclientes.Enabled = true;
 
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
         private void menu()
         {
@@ -62,7 +64,10 @@ namespace punto_de_venta.Formas
             AddOwnedForm(x);
             x.txtnivel15.Text = this.txtnivel12.Text;
             x.btnproductos2.Enabled= true;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
+
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -324,7 +329,7 @@ namespace punto_de_venta.Formas
             txtprecioventa.Enabled = false;
             txtexistencia.Enabled = false;
             txtcosto.Enabled=false;
-            
+            this.dgvproductos.Rows.Clear();
             txtcosto.Clear();
             this.dgvproductos.Rows.Clear();
         }

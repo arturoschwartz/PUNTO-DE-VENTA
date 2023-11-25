@@ -21,6 +21,7 @@ namespace punto_de_venta.Formas
         {
             InitializeComponent();
             menu();
+            eliminacion_de_celdas();
         }
 
         private void btnmenuproveedores_Click(object sender, EventArgs e)
@@ -43,7 +44,9 @@ namespace punto_de_venta.Formas
                 x.btnclientes.Enabled = true;
 
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void menu()
@@ -192,6 +195,24 @@ namespace punto_de_venta.Formas
 
             }
             conexion.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.dgvproveedores.Rows.Clear();
+            txtclave.Clear();
+            txtnombre.Clear();
+            txtdomicilio.Clear();
+            txtlocalidad.Clear();
+            txttelefono.Clear();
+            txtemail.Clear();
+            txtproducto.Clear();
+
+
+        }
+        private void eliminacion_de_celdas()
+        {
+            dgvproveedores.AllowUserToAddRows = false;
         }
     }
 }

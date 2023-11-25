@@ -69,7 +69,9 @@ namespace punto_de_venta.Formas
                     Formas.Frmmenu x = new Formas.Frmmenu();
                     AddOwnedForm(x);
                     x.txtnivel11.Text = this.txtnivel.Text;
-                    if(txtnivel.Text == "Administrador")
+                    
+
+                    if (txtnivel.Text == "Administrador")
                     {
                         x.btnauditoria.Enabled = true;
                         x.btninventarioo.Enabled = true;
@@ -84,12 +86,14 @@ namespace punto_de_venta.Formas
                         x.btnclientes.Enabled = true;
 
                     }
-                    x.Show();
+                    this.Hide();
+                    x.ShowDialog();
+                    this.Close();
 
-                    
-                    
-                    
-                    
+
+
+
+
 
                 }
                 else
@@ -108,7 +112,9 @@ namespace punto_de_venta.Formas
                 }
 
                 conexion.Close();
+                
             }
+            
         }
 
         private void btnentrar_Click(object sender, EventArgs e)
@@ -149,7 +155,9 @@ namespace punto_de_venta.Formas
                     x.btnclientes.Enabled = true;
 
                 }
-                x.Show();
+                this.Hide();
+                x.ShowDialog();
+                this.Close();
 
 
 

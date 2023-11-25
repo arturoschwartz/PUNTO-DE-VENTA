@@ -254,7 +254,7 @@
   <data name="btnactualizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAABHdJREFUSEu1V+1PW2UUb3yJ/gnzLbqpn03U+FU/LjBW2ttWGE6IzLLM8M1C7du9
+        DQAACw0B7QfALAAABHdJREFUSEu1V+1PW2UUb3yJ/gnzLbqpn03U+FU/LjBW2ttWGE6IzLLM8M1C7du9
         d7yMF80QE6MzcdLq5hhTZkvfbrtSzJa9J47NJcJgmwwKuNaYJTIjref39LmlYFEq11/yNDc9557fvec5
         z++cqysXZvPggzttw49X2wMvVTv8r+id4adeFRMPcbO2qLQHtgliRLLIyrWa9tG5+p7Ts9b+S4t7P7q8
         aGmLp/VO/2vcVRsYWoJPmqTo8O7usZTNN7ncFUjnekO/rlr7Pv4hoymx4Im8U9ueSLmO3V4uJuoJZnId
@@ -279,7 +279,7 @@
   <data name="btnbaja.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAUNJREFUaEPtlUEOwjAMBPtrjnDk19AIVqqsbWs7TuJUHWklDj7MQIHl5uK81r1/
+        DQAACw0B7QfALAAAAUNJREFUaEPtlUEOwjAMBPtrjnDk19AIVqqsbWs7TuJUHWklDj7MQIHl5uK81r1/
         L+ejyH/+my5iKz9dBJPH0kccyWNpIzTyWLoIizyWJsIjjw2PqJHHhkVEyGPdIyLlsW4RLeSx5hEWeQm7
         YWsWYX3nJexmb+ERnsdGwm6OFhbhfeYl7OZs1RE1X1gJu9HMHVEjXyZhN9qZI2rlyyTsxjJ1RIR8mYTd
         WHcaESVfJmE3nu1GRMqXSdiNdzTisY4deydhN94911EiIyTsxrNdeRAVIWE31p3Kg4gICbuxTC0PtBHm
@@ -290,7 +290,7 @@
   <data name="Deshacer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAeBJREFUaEPtmM9KAzEQxnNQL4qgz+C/uxcPoh7Egw/iAwjqgyj6DoLiSepm20UK
+        DAAACwwBP0AiyAAAAeBJREFUaEPtmM9KAzEQxnNQL4qgz+C/uxcPoh7Egw/iAwjqgyj6DoLiSepm20UK
         nnrQTVrFh1BETwpqsjuV3e7olmbSZiU/+KCFZPJlm9nMlHk8Hs8/od7ehk8VhMsdpQ/4ViGiaIxxccRC
         +ZWoUtTkrHrqjR/zldpA0J5X5h9y5iuzgbrYUuafC+YrsYE0Wd9R81rOkibrIWo6KydpxjMsFCFqeDC9
         Kd1DzANWi5dgJQtEci5dDDVCqRt1NFdhVSJ4e1MFfUIWsyMuPtV6J+xUToADA8qS1aa4uE7uGCNGuYFE

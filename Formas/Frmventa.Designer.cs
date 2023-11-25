@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmventa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtcambio = new System.Windows.Forms.TextBox();
             this.lblcambio = new System.Windows.Forms.Label();
             this.txtpago = new System.Windows.Forms.TextBox();
@@ -88,6 +88,7 @@
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.txtimporte = new System.Windows.Forms.TextBox();
             this.txtproducto = new System.Windows.Forms.TextBox();
+            this.btnagregar = new System.Windows.Forms.Button();
             this.gpboxtipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -164,11 +165,10 @@
             // 
             // cboxfecha
             // 
-            this.cboxfecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboxfecha.Enabled = false;
             this.cboxfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxfecha.FormattingEnabled = true;
-            this.cboxfecha.Location = new System.Drawing.Point(1047, 213);
+            this.cboxfecha.Location = new System.Drawing.Point(1047, 207);
             this.cboxfecha.Margin = new System.Windows.Forms.Padding(4);
             this.cboxfecha.Name = "cboxfecha";
             this.cboxfecha.Size = new System.Drawing.Size(284, 33);
@@ -176,11 +176,10 @@
             // 
             // lblfecha
             // 
-            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfecha.AutoSize = true;
             this.lblfecha.Enabled = false;
             this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.Location = new System.Drawing.Point(977, 216);
+            this.lblfecha.Location = new System.Drawing.Point(977, 210);
             this.lblfecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(67, 25);
@@ -189,10 +188,9 @@
             // 
             // txtfolio
             // 
-            this.txtfolio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtfolio.Enabled = false;
             this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfolio.Location = new System.Drawing.Point(1047, 163);
+            this.txtfolio.Location = new System.Drawing.Point(1047, 157);
             this.txtfolio.Margin = new System.Windows.Forms.Padding(4);
             this.txtfolio.Name = "txtfolio";
             this.txtfolio.Size = new System.Drawing.Size(207, 30);
@@ -200,11 +198,10 @@
             // 
             // lblfolio
             // 
-            this.lblfolio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfolio.AutoSize = true;
             this.lblfolio.Enabled = false;
             this.lblfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfolio.Location = new System.Drawing.Point(985, 166);
+            this.lblfolio.Location = new System.Drawing.Point(985, 160);
             this.lblfolio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfolio.Name = "lblfolio";
             this.lblfolio.Size = new System.Drawing.Size(54, 25);
@@ -270,6 +267,7 @@
             // btndeshacer
             // 
             this.btndeshacer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btndeshacer.Enabled = false;
             this.btndeshacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeshacer.Image = ((System.Drawing.Image)(resources.GetObject("btndeshacer.Image")));
             this.btndeshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -286,6 +284,7 @@
             // btnguardar
             // 
             this.btnguardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnguardar.Enabled = false;
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -302,6 +301,7 @@
             // btntotalizar
             // 
             this.btntotalizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btntotalizar.Enabled = false;
             this.btntotalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntotalizar.Image = ((System.Drawing.Image)(resources.GetObject("btntotalizar.Image")));
             this.btntotalizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -512,14 +512,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -527,19 +527,20 @@
             this.precio,
             this.cantidad,
             this.importe});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvventas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvventas.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvventas.Location = new System.Drawing.Point(255, 461);
             this.dgvventas.Name = "dgvventas";
+            this.dgvventas.RowHeadersVisible = false;
             this.dgvventas.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dgvventas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
+            this.dgvventas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvventas.RowTemplate.Height = 24;
             this.dgvventas.Size = new System.Drawing.Size(1025, 206);
             this.dgvventas.TabIndex = 84;
@@ -662,7 +663,7 @@
             this.btnquitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnquitar.Image = ((System.Drawing.Image)(resources.GetObject("btnquitar.Image")));
             this.btnquitar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnquitar.Location = new System.Drawing.Point(1286, 518);
+            this.btnquitar.Location = new System.Drawing.Point(1286, 576);
             this.btnquitar.Name = "btnquitar";
             this.btnquitar.Size = new System.Drawing.Size(121, 91);
             this.btnquitar.TabIndex = 79;
@@ -751,11 +752,27 @@
             this.txtproducto.Size = new System.Drawing.Size(270, 30);
             this.txtproducto.TabIndex = 99;
             // 
+            // btnagregar
+            // 
+            this.btnagregar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Image = ((System.Drawing.Image)(resources.GetObject("btnagregar.Image")));
+            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnagregar.Location = new System.Drawing.Point(1286, 461);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(121, 91);
+            this.btnagregar.TabIndex = 100;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            // 
             // Frmventa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1417, 869);
+            this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.txtproducto);
             this.Controls.Add(this.txtimporte);
             this.Controls.Add(this.txtcantidad);
@@ -874,5 +891,6 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtnivel15;
         public System.Windows.Forms.Button btnproductos2;
+        private System.Windows.Forms.Button btnagregar;
     }
 }

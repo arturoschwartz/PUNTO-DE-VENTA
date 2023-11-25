@@ -37,7 +37,6 @@ namespace punto_de_venta.Formas
             dgvinventario();
             
             
-            
         }
 
         private void btnmenuventa_Click(object sender, EventArgs e)
@@ -59,13 +58,12 @@ namespace punto_de_venta.Formas
                 x.btnproductos.Enabled = true;
                 x.btnclientes.Enabled = true;
                 
-
-                
-
             }
-            x.Show();
-            
-            
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
+
+
         }
         private void cambio()
         {
@@ -77,7 +75,9 @@ namespace punto_de_venta.Formas
             Formas.Frmproductos x = new Formas.Frmproductos();
             AddOwnedForm(x);
             x.txtnivel12.Text = this.txtnivel15.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void rdbtncredito_CheckedChanged(object sender, EventArgs e)
@@ -90,6 +90,10 @@ namespace punto_de_venta.Formas
                 btnbuscarcliente.Enabled = true;
                 cboxcliente.Enabled = true;
                 lblbuscar.Enabled = true;
+                lblfecha.Enabled = true;
+                lblfolio.Enabled = true;
+                txtfolio.Enabled = true;
+                cboxfecha.Enabled = true;
                 
                 
             }
@@ -103,7 +107,10 @@ namespace punto_de_venta.Formas
             txtnombre.Clear();
             txtlocalidad.Clear();
             txttelefono.Clear();
-            
+            lblfolio.Enabled = false;
+            txtfolio.Enabled= false;
+            lblfecha.Enabled= false;
+            cboxfecha.Enabled = false;
             btnbuscarcliente.Enabled = false;
             cboxcliente.Enabled = false;
             lblbuscar.Enabled = false;
@@ -169,10 +176,14 @@ namespace punto_de_venta.Formas
                     txtnombre2.Text = leer["pto_nombre"].ToString();
                     txtpreciounit.Text = leer["pto_precio"].ToString();
                     dgvventas.Rows.Insert(0, txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text = "1", txtimporte.Text = txtpreciounit.Text);
+                    dgvventas.CurrentCell = dgvventas.Rows[0].Cells[0];
                     suma();
                     txtcodigo.Focus();
                     txtcodigo.SelectAll();
-                    
+                    txtcantidad.Clear();
+                    btnguardar.Enabled = true;
+                    btntotalizar.Enabled = true;
+                    btndeshacer.Enabled = true;
                     
                 }
                 else
@@ -182,8 +193,10 @@ namespace punto_de_venta.Formas
                     txtcodigo.Clear();
                     txtcodigo.Focus();
                 }
-                
+                conexion.Close();
             }
+            
+
         }
         private void btndeshacer_Click(object sender, EventArgs e)
         {
@@ -199,6 +212,8 @@ namespace punto_de_venta.Formas
             txtpreciounit.Enabled = false;
             txtcantidad.Clear();
             txtimporte.Clear();
+            btnguardar.Enabled = false;
+            btntotalizar.Enabled = false;
         }
         
 
@@ -267,10 +282,11 @@ namespace punto_de_venta.Formas
                 dgvventas.Rows.RemoveAt(dgvventas.CurrentRow.Index);
                 txtimporte.Text = (Convert.ToDouble(txtpreciounit.Text) * Convert.ToDouble(txtcantidad.Text)).ToString("N2");
                 dgvventas.Rows.Insert(0, txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
+                dgvventas.CurrentCell = dgvventas.Rows[0].Cells[0];
                 suma();
                 txtcantidad.Clear();
-                dgvventas.ClearSelection();
                 txtcodigo.Focus();
+                
 
             }
             else
@@ -314,12 +330,52 @@ namespace punto_de_venta.Formas
                 comando.Parameters.AddWithValue("@importe", Convert.ToString(row.Cells["importe"].Value));
                 comando.ExecuteNonQuery();
                 dgvinventario();
-                MessageBox.Show("VENTA EXITOSA", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
-            
+            if (rdbtncredito.Checked == true)
+            {
+                objconexion = new Clases.conexion();
+                conexion = new SqlConnection(objconexion.conn());
+                conexion.Open();
+                String insert = "insert into Credito values (@ct_id_cliente, @ct_nombre_cliente, @ct_nombre_producto, @ct_cantidad, @ct_importe)";
+                SqlCommand insertar = new SqlCommand(insert, conexion);
 
-            
+                foreach (DataGridViewRow row in dgvventas.Rows)
+                {
+                    insertar.Parameters.Clear();
+                    insertar.Parameters.AddWithValue("@ct_id_cliente", this.txtcliente.Text);
+                    insertar.Parameters.AddWithValue("@ct_nombre_cliente", this.txtnombre.Text);
+                    insertar.Parameters.AddWithValue("@ct_nombre_producto", Convert.ToString(row.Cells["nombre"].Value));
+                    insertar.Parameters.AddWithValue("@ct_cantidad", Convert.ToString(row.Cells["cantidad"].Value));
+                    insertar.Parameters.AddWithValue("@ct_importe", Convert.ToString(row.Cells["importe"].Value));
+                    insertar.ExecuteNonQuery();
+
+                }
+            }
+            if (existe ==1)
+            {
+                MessageBox.Show("VENTA EXITOSA", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnguardar.Enabled = false;
+                btntotalizar.Enabled = false;
+                txtcodigo.Clear();
+                txtnombre2.Clear();
+                txtpreciounit.Clear();
+                txtcodigo.Focus();
+                txtpago.Clear();
+                txtcambio.Clear();
+                this.dgvventas.Rows.Clear();
+                txttotal.Clear();
+                suma();
+                txtpreciounit.Enabled = false;
+                txtcantidad.Clear();
+                txtimporte.Clear();
+                txtcliente.Clear();
+                txtnombre.Clear();
+                txtlocalidad.Clear();
+                txttelefono.Clear();
+                rdbtncontado.Focus();
+            }
+            conexion.Close();
         }
         private void elimar_seldas()
         {
@@ -338,6 +394,19 @@ namespace punto_de_venta.Formas
             AddOwnedForm(x);
             x.dgvinventario.Rows.Add(txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
             
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            //convierto los textos a double y despues el resultado a texto con tostring
+            //el complemento "N2 se determina que reconozca los decimales en el resultado"
+            dgvventas.Rows.RemoveAt(dgvventas.CurrentRow.Index);
+            txtimporte.Text = (Convert.ToDouble(txtpreciounit.Text) * Convert.ToDouble(txtcantidad.Text)).ToString("N2");
+            dgvventas.Rows.Insert(0, txtcodigo.Text, txtnombre2.Text, txtpreciounit.Text, txtcantidad.Text, txtimporte.Text);
+            suma();
+            txtcantidad.Clear();
+            dgvventas.ClearSelection();
+            txtcodigo.Focus();
         }
     }
 }

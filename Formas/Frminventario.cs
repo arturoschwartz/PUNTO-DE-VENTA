@@ -37,11 +37,10 @@ namespace punto_de_venta.Formas
                 x.btnproductos.Enabled = true;
                 x.btnclientes.Enabled = true;
 
-
-
-
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void eliminar_celdas()

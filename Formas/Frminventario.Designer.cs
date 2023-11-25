@@ -161,6 +161,7 @@
             this.dgvinventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvinventario.Location = new System.Drawing.Point(232, 203);
             this.dgvinventario.Name = "dgvinventario";
+            this.dgvinventario.RowHeadersVisible = false;
             this.dgvinventario.RowHeadersWidth = 51;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Blue;
             this.dgvinventario.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -250,6 +251,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frminventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frminventario";

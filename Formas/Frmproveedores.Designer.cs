@@ -71,6 +71,7 @@
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,7 +110,7 @@
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnsalir.Location = new System.Drawing.Point(1117, 649);
+            this.btnsalir.Location = new System.Drawing.Point(1224, 649);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(131, 93);
@@ -126,7 +127,7 @@
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneliminar.Location = new System.Drawing.Point(810, 649);
+            this.btneliminar.Location = new System.Drawing.Point(917, 649);
             this.btneliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(131, 93);
@@ -143,7 +144,7 @@
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
             this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnguardar.Location = new System.Drawing.Point(497, 649);
+            this.btnguardar.Location = new System.Drawing.Point(604, 649);
             this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(131, 93);
@@ -377,7 +378,7 @@
             this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Image")));
             this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnactualizar.Location = new System.Drawing.Point(654, 649);
+            this.btnactualizar.Location = new System.Drawing.Point(761, 649);
             this.btnactualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(131, 93);
@@ -445,7 +446,7 @@
             this.btnbaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbaja.Image = ((System.Drawing.Image)(resources.GetObject("btnbaja.Image")));
             this.btnbaja.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnbaja.Location = new System.Drawing.Point(963, 649);
+            this.btnbaja.Location = new System.Drawing.Point(1070, 649);
             this.btnbaja.Margin = new System.Windows.Forms.Padding(4);
             this.btnbaja.Name = "btnbaja";
             this.btnbaja.Size = new System.Drawing.Size(131, 93);
@@ -511,6 +512,7 @@
             this.dgvproveedores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvproveedores.Location = new System.Drawing.Point(621, 177);
             this.dgvproveedores.Name = "dgvproveedores";
+            this.dgvproveedores.RowHeadersVisible = false;
             this.dgvproveedores.RowHeadersWidth = 51;
             this.dgvproveedores.RowTemplate.Height = 24;
             this.dgvproveedores.Size = new System.Drawing.Size(825, 443);
@@ -565,11 +567,29 @@
             this.producto.Name = "producto";
             this.producto.ReadOnly = true;
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Enabled = false;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(449, 649);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 93);
+            this.button2.TabIndex = 55;
+            this.button2.Text = "Deshacer";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Frmproveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1458, 785);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvproveedores);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnbaja);
@@ -644,5 +664,6 @@
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtnivel13;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
     }
 }

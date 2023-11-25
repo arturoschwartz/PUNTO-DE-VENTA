@@ -23,7 +23,7 @@ namespace punto_de_venta.Formas
             Formas.Frmmenu x = new Formas.Frmmenu();
             AddOwnedForm(x);
             x.txtnivel11.Text = this.txtnivel6.Text;
-            if(x.txtnivel11.Text == "Administrador")
+            if (x.txtnivel11.Text == "Administrador")
             {
                 x.btnauditoria.Enabled = true;
                 x.btninventarioo.Enabled = true;
@@ -37,7 +37,9 @@ namespace punto_de_venta.Formas
                 x.btnproductos.Enabled = true;
                 x.btnclientes.Enabled = true;
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
         private void permisos()
         {

@@ -315,6 +315,7 @@
             this.dgvempleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvempleados.Location = new System.Drawing.Point(622, 249);
             this.dgvempleados.Name = "dgvempleados";
+            this.dgvempleados.RowHeadersVisible = false;
             this.dgvempleados.RowHeadersWidth = 51;
             this.dgvempleados.RowTemplate.Height = 24;
             this.dgvempleados.Size = new System.Drawing.Size(815, 364);

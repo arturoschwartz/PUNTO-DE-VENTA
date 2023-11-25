@@ -43,7 +43,9 @@ namespace punto_de_venta.Formas
                 x.btnclientes.Enabled = true;
 
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
 
         }
 

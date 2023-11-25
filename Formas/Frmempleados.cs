@@ -22,6 +22,7 @@ namespace punto_de_venta.Formas
         {
             InitializeComponent();
             menu();
+            eliminar_celda();
         }
 
         private void btnmenuempleados_Click(object sender, EventArgs e)
@@ -44,7 +45,9 @@ namespace punto_de_venta.Formas
                 x.btnclientes.Enabled = true;
 
             }
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
         private void menu()
         {
@@ -96,6 +99,7 @@ namespace punto_de_venta.Formas
                     txttelefono.Enabled = true;
                     txtemail.Enabled = true;
                     txtclave.Focus();
+                    txtclave.SelectAll();
 
 
 
@@ -112,6 +116,7 @@ namespace punto_de_venta.Formas
                         txtlocalidad.Enabled = true;
                         txttelefono.Enabled = true;
                         txtemail.Enabled = true;
+                        
 
 
                     }
@@ -233,8 +238,14 @@ namespace punto_de_venta.Formas
             txtlocalidad.Enabled = false;
             txttelefono.Enabled = false;
             txtemail.Enabled = false;
+            this.dgvempleados.Rows.Clear();
 
 
+        }
+
+        private void eliminar_celda()
+        {
+            dgvempleados.AllowUserToAddRows = false;
         }
     }
 }

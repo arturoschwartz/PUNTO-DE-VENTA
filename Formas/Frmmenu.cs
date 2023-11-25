@@ -18,6 +18,7 @@ namespace punto_de_venta.Formas
         {
             InitializeComponent();
             llenar();
+            
         }
 
         private void btnventa_Click(object sender, EventArgs e)
@@ -29,8 +30,11 @@ namespace punto_de_venta.Formas
             {
                 x.btnproductos2.Enabled = true;
             }
-            x.Show();
-            
+            //x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
+
         }
 
         private void btninventario_Click(object sender, EventArgs e)
@@ -38,21 +42,27 @@ namespace punto_de_venta.Formas
             Formas.Frminventario x = new Formas.Frminventario();
             AddOwnedForm(x);
             x.txtnivel23.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnrespaldo_Click(object sender, EventArgs e)
         {
             Formas.Frmrespaldo x = new Formas.Frmrespaldo();
-            x.Show();
             this.Hide();
+            x.ShowDialog();
+            this.Close();
+
         }
 
         private void btncompras_Click(object sender, EventArgs e)
         {
             Formas.Frmcompras x = new Formas.Frmcompras();
-            x.Show();
             this.Hide();
+            x.ShowDialog();
+            this.Close();
+
         }
 
         private void llenar()
@@ -66,7 +76,9 @@ namespace punto_de_venta.Formas
             Formas.Frmclientes x = new Formas.Frmclientes();
             AddOwnedForm(x);
             x.txtnivel8.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnempleados_Click(object sender, EventArgs e)
@@ -74,7 +86,9 @@ namespace punto_de_venta.Formas
             Formas.Frmempleados x = new Formas.Frmempleados();
             AddOwnedForm(x);
             x.txtnivel10.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnproveedores_Click(object sender, EventArgs e)
@@ -82,7 +96,9 @@ namespace punto_de_venta.Formas
             Formas.Frmproveedores x = new Formas.Frmproveedores();
             AddOwnedForm(x);
             x.txtnivel13.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btndatos_Click(object sender, EventArgs e)
@@ -100,7 +116,9 @@ namespace punto_de_venta.Formas
             Formas.Frmventas x = new Formas.Frmventas();
             AddOwnedForm(x);
             x.txtnivel16.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btncompras2_Click(object sender, EventArgs e)
@@ -108,7 +126,9 @@ namespace punto_de_venta.Formas
             Formas.Frmcompras x = new Formas.Frmcompras();
             AddOwnedForm(x);
             x.txtnivel9.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btninventario2_Click(object sender, EventArgs e)
@@ -126,7 +146,9 @@ namespace punto_de_venta.Formas
             Formas.Frmrespaldo x = new Formas.Frmrespaldo();
             AddOwnedForm(x);
             x.txtnivel14.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnconfiguracin_Click(object sender, EventArgs e)
@@ -134,7 +156,9 @@ namespace punto_de_venta.Formas
             Formas.Frmconfiguracion x = new Formas.Frmconfiguracion();
             AddOwnedForm(x);
             x.txtnivel21.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnusuarios_Click(object sender, EventArgs e)
@@ -147,7 +171,9 @@ namespace punto_de_venta.Formas
             Formas.Frmacercade x = new Formas.Frmacercade();
             AddOwnedForm(x);
             x.txtnivel6.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnproductos_Click(object sender, EventArgs e)
@@ -155,14 +181,18 @@ namespace punto_de_venta.Formas
             Formas.Frmproductos x = new Formas.Frmproductos();
             AddOwnedForm(x);
             x.txtnivel12.Text = this.txtnivel11.Text;
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             Formas.Frmlogin x = new Formas.Frmlogin();
-            x.Show();
             this.Hide();
+            x.ShowDialog();
+            this.Close();
+
         }
 
         private void btnauditoria_Click_1(object sender, EventArgs e)
@@ -170,8 +200,9 @@ namespace punto_de_venta.Formas
             Formas.Frmauditoria x = new Formas.Frmauditoria();
             AddOwnedForm(x);
             x.txtnivel7.Text = this.txtnivel11.Text;
-
-            x.Show();
+            this.Hide();
+            x.ShowDialog();
+            this.Close();
         }
 
         private void Frmmenu_KeyDown(object sender, KeyEventArgs e)
